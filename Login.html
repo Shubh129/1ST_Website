@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Login-outer {
+            display: flex;
+            justify-content: center;
+            padding:200px;
+        }
+
+        .Login-head {
+            text-align: center;
+            font-family: 'Syne', sans-serif;
+            color: white;
+        }
+
+        .Login-main {
+            border: 1px solid white;
+            border-radius: 12px;
+            height: 400px;
+            width: 350px;
+            background-color: rgb(0, 0, 0);
+            box-shadow: 1px 1px 10px black;
+        }
+
+        .login-box {
+            margin: 20px;
+        }
+
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+        }
+
+        .top1 {
+
+            margin-top: 10px;
+        }
+
+        .top2 {
+
+            margin-top: 20px;
+        }
+
+        .form-label {
+            position: relative;
+            font-family: 'Syne', sans-serif;
+            color: white;
+        }
+
+        .form-control {
+            padding: 10px;
+            border-radius: 6px;
+            border: none;
+            border: 1px solid grey;
+        }
+
+        .form-button {
+            width: 100%;
+            height: 50px;
+            border-radius: 6px;
+            border: none;
+            background-color: #7B5FFB;
+            color: white;
+        }
+
+        .Link1 {
+            text-decoration: none;
+            margin-left: 63%;
+
+            color: #7B5FFB;
+        }
+    </style>
+</head>
+
+<body >
+    <section style="background:linear-gradient(to top right, black,black, rgb(29, 29, 29),black,black)"><div class="Login-body">
+        <div class="Login-outer">
+            <div class="Login-main">
+                <h1 class="Login-head">Login</h1>
+                <div class="login-box">
+                    <form action="">
+                        <div class="form-field">
+                            <label class="form-label top1">Name</label>
+                            <input type="text" class="form-control" placeholder="Enter Your User Name">
+                        </div>
+                        <div class="form-field">
+                            <label class="form-label top2">Password</label>
+                            <input type="password" class="form-control" placeholder="Enter Your Password">
+                        </div>
+                        <div>
+                            <p><a href="#" class="Link1">Forgot password?</a></p>
+                            <button type="button" class="form-button">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+</body>
+
+</html>

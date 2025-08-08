@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping site </title>
+    <link rel="stylesheet" href="Main.css">
+    <link rel="stylesheet" href="Product.css">
+    <style>
+        .section-main {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+
+        .section-main001 {
+            display: flex;
+            flex-direction: row;
+            column-gap: 50px;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+
+        .section-main003 {
+            display: flex;
+            flex-direction: row;
+            column-gap: 50px;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .cover001 {
+            height: 250px;
+            width: 1300px;
+            background-color: #a05eff;
+            border: 1px solid purple;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+        }
+
+        .inner-cover001 {
+            height: 80px;
+            width: 900px;
+            border: 1px solid white;
+            background-color: white;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 20px;
+            padding: 20px;
+        }
+
+        .search-product {
+            color: black;
+            font-family: 'Syne', sans-serif;
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .search-input1 {
+            height: 40px;
+            width: 350px;
+            border-radius: 5px;
+            border: none;
+            padding-left: 12px;
+            background-color: rgb(218, 218, 218);
+        }
+
+        .search-input2 {
+            height: 40px;
+            width: 350px;
+            border-radius: 5px;
+            border: none;
+            padding-left: 12px;
+            background-color: rgb(218, 218, 218);
+        }
+        .search-input1:focus{
+            outline: none;
+        }
+        .search-input2:focus{
+            outline: none;
+        }
+
+        .search-button1 {
+            height: 40px;
+            width: 150px;
+            margin-left: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #a05eff;
+            color: white;
+        }
+
+        .search-button1:hover {
+            cursor: pointer;
+        }
+
+        .outer-box001 {
+            border: 1px solid;
+            border-left: none;
+            border-right: none;
+            border-bottom: none;
+            width: 600px;
+            border-radius: 50px 50px 0px 0px;
+            background: linear-gradient(to top, #000000, #a05eff);
+
+        }
+
+        .grid-main001 {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            /* margin-left: 45px; */
+            display: grid;
+            gap: 40px;
+            grid-template: 200px /245px 245px;
+            cursor: pointer;
+
+        }
+
+        .grid0001 {
+            border: none;
+            border-radius: 12px;
+            background-color: white;
+            padding-bottom: 50px;
+            height: auto;
+            box-shadow: 1px 1px 2px black;
+            transition: 0.3s ease 0s;
+            position: relative;
+            bottom: 25px;
+        }
+
+        .grid0001:hover {
+            transform: scale(1.1);
+        }
+
+        .CategoryImg0001 {
+            width: 100%;
+            height: 168px;
+            object-fit: cover;
+            border-radius: 12px 12px 0px 0px;
+        }
+
+        .category-title0001 {
+            text-align: center;
+            font-size: 20px;
+            font-family: "Boldonse", system-ui;
+            font-style: normal;
+        }
+
+        .outer-box002 {
+            border: 1px solid;
+            border-left: none;
+            border-right: none;
+            border-bottom: none;
+            width: 600px;
+            border-radius: 50px 50px 0px 0px;
+            background: linear-gradient(to top, #000000, #F0E4D3);
+
+        }
+
+        .outer-box003 {
+            border: 1px solid;
+            border-left: none;
+            border-right: none;
+            border-bottom: none;
+            width: 600px;
+            border-radius: 50px 50px 0px 0px;
+            background: linear-gradient(to top, #000000, #7D7D7D);
+
+        }
+
+        .head-title001 {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            text-align: center;
+            font-size: 80px;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800px;
+            letter-spacing: 1px;
+        }
+
+        .Category-Close {
+            border: 0px solid white;
+            border-right: none;
+            border-left: none;
+            border-top: none;
+            /* box-shadow: 0px 1px 15px #a05eff; */
+        }
+
+        .Category-Close001 {
+            border: 0px solid white;
+            border-right: none;
+            border-left: none;
+            border-top: none;
+            /* height: 1200px; */
+            /* box-shadow: 0px 1px 15px #a05eff; */
+        }
+
+        .characterstics001 {
+            display: flex;
+            flex-direction: row;
+            column-gap: 30px;
+            justify-content: center;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        .characterstics001-sub {
+            border: 1px solid white;
+            border-radius: 12px;
+            height: 400px;
+            width: 350px;
+            background-color: white;
+        }
+
+        /* .characterstics001-sub:hover{
+            background-color: black;
+            color: white;
+        } */
+
+        /* .character-data001 {}*/
+
+       
+
+        .inner-image001 {
+            width: 150px;
+            margin-left: 75px;
+            margin-right: 75px;
+            margin-top: 30px;
+        }
+
+        .inner-text001 {
+            font-family: 'Montserrat', sans-serif;
+            margin-top: 15px;
+            text-align: center;
+            color: black;
+            font-weight: bolder;
+            font-size: 20px;
+        }
+        
+        .inner-text002 {
+            
+            font-family: "Open Sans", "Roboto", Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            line-height: 1.4;
+            margin-left: 12px;
+            margin-right: 12px;
+            margin-top: 12px;
+            text-align: center;
+            color: black;
+        }
+        
+        .inner-text0001 {
+            font-family: 'Montserrat', sans-serif;
+            margin-top: 30px;
+            text-align: center;
+            color: #5908ca;
+            font-weight: lighter;
+            font-size: 20px;
+        }
+        .inner-text0002 {
+            
+            font-family: "Open Sans", "Roboto", Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            line-height: 1.5;
+            text-align: center;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 20px;
+            color: rgb(92, 92, 92);
+        }
+        .dropdown001{
+            position: relative;
+            right: -210px;
+            top: 19px;
+        }
+        .dropdown001:hover{
+            cursor: pointer;
+        }
+
+        .dropdown-content001{
+             display: none;
+            position: absolute;
+
+            top:75px;
+            right: 310px;
+            background-color: white;
+            border: 1px solid rgba(128, 128, 128, 0.632);
+            border-radius: 0px 0px 10px 10px;
+            min-width: 150px;
+        }
+        .dropdown-content001 a{
+            display: block;
+            padding: 10px;
+            text-align: center;
+            color:black;
+            text-decoration: none;
+
+         }
+         .a10{
+            
+            border-bottom: 1px solid rgba(128, 128, 128, 0.632);
+
+         }
+    </style>
+</head>
+
+<body  style="background:linear-gradient(to top right, black,black, rgb(29, 29, 29),black,black)">
+    <header class="head">
+        <div class="nav_bar">
+            <nav>
+                <ul>
+                    <li class="nav"><a href="Main.html" class="a1 logo"><img class="urban" src="images/LOGO.png"
+                                alt="">Urban<span class="cap">T</span>reasure</a></li>
+                    <li class="nav"><a href="Main.html" class="a1 a8 home">Home</a></li>
+                    <li class="nav"><a href="Shop_page.html" class="a1 a8">Shop</a></li>
+                    <li class="nav"><a href="Categories.html" class="a1 a8">Categories</a></li>
+                    <li class="nav"><a href="Aboutus.html" class="a1 a8">About</a></li>
+                    <li class="nav"><a href="Contact.html" class="a1 a8">Contact</a></li>
+                    <li class="nav"><div class="a1 a8 choose3 dropdown001"><img
+                                src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/profile-52e0dc.svg"
+                                alt="Login" class="_1XmrCc _2zJ7Pb" width="24" height="24"></div>
+                            <div class="dropdown-content001">
+                                <a  class="a10"href="Registeration_Page.html">Signup</a>
+                                <a class="a20" href="LOGIN_page.html">Login?</a>
+                            </div>
+                            </li>
+                    <li class="nav"><a href="Cart_page.html" class="a1 a8 choose2"><img
+                                src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_cart-eed150.svg"
+                                alt="Cart" class="_1XmrCc" width="24" height="24"></a></li>
+                    <li class="nav">
+                        <label id="id1" class="choose">Choose Language :</label>
+                        <select class="choose1" name="Language" id="id1">
+                            <option disabled>--Select Language--</option>
+                            <option value="English" selected>English</option>
+                            <option value="Hindi">Hindi</option>
+                            <option value="French">French</option>
+                            <option value="es">Spanish</option>
+                            <option value="de">German</option>
+                            <option value="zh">Chinese (Mandarin)</option>
+                            <option value="ja">Japanese</option>
+                            <option value="ko">Korean</option>
+                            <option value="ar">Arabic</option>
+                            <option value="ru">Russian</option>
+                            <option value="pt">Portuguese</option>
+                            <option value="it">Italian</option>
+                            <option value="bn">Bengali</option>
+                            <option value="pa">Punjabi</option>
+                            <option value="ta">Tamil</option>
+                            <option value="te">Telugu</option>
+                            <option value="gu">Gujarati</option>
+                            <option value="mr">Marathi</option>
+                            <option value="ur">Urdu</option>
+                            <option value="fa">Persian</option>
+                            <option value="tr">Turkish</option>
+                            <option value="vi">Vietnamese</option>
+                            <option value="th">Thai</option>
+                            <option value="sw">Swahili</option>
+                        </select>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container-main001">
+        <img src="images/Main.jpg" class="main-img main-products001" alt="MainImg">
+        <img src="images/all_black.jpg" class="main-img main-products002 main-products010" alt="">
+        <img src="images/Different_product.jpg" class="main-img main-products003" alt="">
+        <img src="images/Xbox.jpg" class="main-img main-products004" alt="">
+        <img src="images/Main.jpg" class="main-img main-products001" alt="MainImg">
+    </div>
+
+    <section class="section1" >
+        <div class="characterstics001">
+            <div class="characterstics001-sub">
+                <div class="character-data001">
+                    <div class="inner-data001"><img class="inner-image001" src="images/Secure.jpg" alt="">
+                        <div class="inner-text001">Authenticity Guaranteed</div>
+                        <div class="inner-text002">All products listed are 100% genuine and sourced from verified
+                            manufacturers and authorized sellers. We don't compromise on originality.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="characterstics001-sub">
+                <div class="character-data001">
+                    <div class="inner-data001"><img class="inner-image001" src="images/QualityAssured.jpg" alt="">
+                        <div class="inner-text001">Quality Assured</div>
+                        <div class="inner-text002">Each item undergoes multiple quality checks before reaching your
+                            doorstep. From premium materials to trusted performance — you get only the best.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="characterstics001-sub">
+                <div class="character-data001">
+                    <div class="inner-data001"><img class="inner-image001" src="images/Quality.jpg" alt="">
+                        <div class="inner-text001">Secure & Smart Packaging</div>
+                        <div class="inner-text002">We ensure your products arrive in perfect condition with safe,
+                            eco-friendly packaging designed to protect your order during transit.
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="characterstics001-sub">
+                <div class="character-data001">
+                    <div class="inner-data001"><img class="inner-image001" src="images/Value_for_money.jpg" alt="">
+                        <div class="inner-text001">Value for Money</div>
+                        <div class="inner-text002">Whether budget-friendly or premium, our range guarantees competitive
+                            pricing without compromising on quality.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-main">
+            <div class="cover001">
+                <h1 class="search-product">Search Your Product</h1>
+                <div class="inner-cover001">
+                    <form action="">
+                        <input type="text" class="search-input1" placeholder="Product" required>
+                        <input type="text" class="search-input2" placeholder="Category" required>
+                        <button type="submit" class="search-button1">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="Category-Close">
+            <h2 class="head-title001">Categories</h2>
+            <div class="section-main001">
+                <div class="outer-box001">
+                    <div class="grid-main001">
+                        <div class="grid0001">
+                            <img class="CategoryImg0001" src="images/Stream_Setup.jpg" alt="Stream&SetupImg">
+                            <h3 class="category-title0001">Streaming & Setup</h3>
+                        </div>
+                        <div class="grid0001">
+                            <img class="CategoryImg0001" src="images/Fashionboth.png" alt="FashionImg">
+                            <h3 class="category-title0001">Fashion</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="outer-box002">
+                    <div class="grid-main001">
+                        <div class="grid0001">
+                            <img class="CategoryImg0001" src="images/Home_Living.jpg" alt="Home&LivingImg">
+                            <h3 class="category-title0001">Home & Living</h3>
+                        </div>
+                        <div class="grid0001">
+                            <img class="CategoryImg0001" src="images/Beauty_PersonalCare.png" alt="Beauty&PersonalImg">
+                            <h3 class="category-title0001">Beauty & Personal Care</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-main003">
+                <div class="outer-box003">
+                    <div class="grid-main001">
+                        <div class="grid0001">
+                            <img class="CategoryImg0001" src="images/Toys_Games.jpg" alt="Toys&GamesImg">
+                            <h3 class="category-title0001">Toys & Games</h3>
+                        </div>
+                        <div class="grid0001">
+                            <img class="CategoryImg0001" src="images/Sports_Fitness.jpg" alt="Sports&FitnessImg">
+                            <h3 class="category-title0001">Sports & Fitness</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="outer-box001">
+                    <div class="grid-main001">
+                        <div class="grid0001">
+                            <img class="CategoryImg0001" src="images/Electronics12.jpg" alt="ElectronicsImg">
+                            <h3 class="category-title0001">Electronics</h3>
+                        </div>
+                        <div class="grid0001">
+                            <img class="CategoryImg0001" src="images/Gaming.jpg" alt="GamingImg">
+                            <h3 class="category-title0001">Gaming</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="Category-Close001">
+            <h2 class="head-title001">Shop</h2>
+            <div class="section001">
+                <div class="product1">
+                    <div class="grid001">
+                        <img class="CategoryImg001" src="images/Electronics12.jpg" alt="ElectronicsImg">
+                        <h3 class="category-title001">Macbook</h3>
+                        <p id="description" style="text-overflow: ellipsis; overflow: hidden;">Modern Minimalist Wooden
+                            Study
+                            Desk
+                            with Scandinavian-Inspired Storage Shelves</p>
+                        <form action="">
+                            <div class="price-set"><del class="del-price">$200 </del> <span
+                                    class="discount-price">$105</span>
+                            </div>
+                            <div class="stars">
+                                ★★★★☆ <span>(4.5/5)</span>
+                            </div>
+                            <div class="product-button001">
+                                <a href="Cart_page.html"><button type="button" id="add">Add to Cart</button></a>
+                                <button type="submit" id="buyButton">BUY NOW</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="product1">
+                    <div class="grid001">
+                        <img class="CategoryImg001" src="images/image11.webp" alt="HeadphonesImg">
+                        <h3 class="category-title001">Wireless Headphones</h3>
+                        <p id="description" style="text-overflow: ellipsis; overflow: hidden;">Modern Minimalist Wooden
+                            Study
+                            Desk
+                            with Scandinavian-Inspired Storage Shelves</p>
+                        <form action="">
+                            <div class="price-set"><del class="del-price">$69 </del> <span
+                                    class="discount-price">$49</span>
+                            </div>
+                            <div class="stars">
+                                ★★★★☆ <span>(4/5)</span>
+                            </div>
+                            <div class="product-button001">
+                                <a href="Cart_page.html"><button type="button" id="add">Add to Cart</button></a>
+                                <button type="submit" id="buyButton">BUY NOW</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="product1">
+                    <div class="grid001">
+                        <img class="CategoryImg001" src="images/image12.webp" alt="KeyboardImg">
+                        <h3 class="category-title001">Keyboard</h3>
+                        <p id="description" style="text-overflow: ellipsis; overflow: hidden;">Modern Minimalist Wooden
+                            Study
+                            Desk
+                            with Scandinavian-Inspired Storage Shelves</p>
+                        <form action="">
+                            <div class="price-set"><del class="del-price">$71 </del> <span
+                                    class="discount-price">$58</span>
+                            </div>
+                            <div class="stars">
+                                ★★★★☆ <span>(4.5/5)</span>
+                            </div>
+                            <div class="product-button001">
+                                <a href="Cart_page.html"><button type="button" id="add">Add to Cart</button></a>
+                                <button type="submit" id="buyButton">BUY NOW</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="product1">
+                    <div class="grid001">
+                        <img class="CategoryImg001" src="images/image13.webp" alt="StudyTableImg">
+                        <h3 class="category-title001">Study Table</h3>
+                        <p id="description" style="text-overflow: ellipsis; overflow: hidden;">Modern Minimalist Wooden
+                            Study
+                            Desk
+                            with Scandinavian-Inspired Storage Shelves</p>
+                        <form action="">
+                            <div class="price-set"><del class="del-price">$189 </del> <span
+                                    class="discount-price">$124</span>
+                            </div>
+                            <div class="stars">
+                                ★★★★☆ <span>(4.5/5)</span>
+                            </div>
+                            <div class="product-button001">
+                                <a href="Cart_page.html"><button type="button" id="add">Add to Cart</button></a>
+                                <button type="submit" id="buyButton">BUY NOW</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="product1">
+                    <div class="grid001">
+                        <img class="CategoryImg001" src="images/image14.webp" alt="BeanbagImg">
+                        <h3 class="category-title001">Bean Bag</h3>
+                        <p id="description" style="text-overflow: ellipsis; overflow: hidden;">Modern Minimalist Wooden
+                            Study
+                            Desk
+                            with Scandinavian-Inspired Storage Shelves</p>
+                        <form action="">
+                            <div class="price-set"><del class="del-price">$200 </del> <span
+                                    class="discount-price">$105</span>
+                            </div>
+                            <div class="stars">
+                                ★★★★☆ <span>(4.5/5)</span>
+                            </div>
+                            <div class="product-button001">
+                                <a href="Cart_page.html"><button type="button" id="add">Add to Cart</button></a>
+                                <button type="submit" id="buyButton">BUY NOW</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+            <div class="section001">
+                <div class="product1">
+                    <div class="grid001">
+                        <img class="CategoryImg001" src="images/image15.jpg" alt="ChairImg">
+                        <h3 class="category-title001">Office Chair</h3>
+                        <p id="description" style="text-overflow: ellipsis; overflow: hidden;">Modern Minimalist Wooden
+                            Study
+                            Desk
+                            with Scandinavian-Inspired Storage Shelves</p>
+                        <form action="">
+                            <div class="price-set"><del class="del-price">$200 </del> <span
+                                    class="discount-price">$105</span>
+                            </div>
+                            <div class="stars">
+                                ★★★★☆ <span>(4.5/5)</span>
+                            </div>
+                            <div class="product-button001">
+                                <a href="Cart_page.html"><button type="button" id="add">Add to Cart</button></a>
+                                <button type="submit" id="buyButton">BUY NOW</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="product1">
+                    <div class="grid001">
+                        <img class="CategoryImg001" src="images/image16.jpg" alt="FrotherImg">
+                        <h3 class="category-title001">Frother</h3>
+                        <p id="description" style="text-overflow: ellipsis; overflow: hidden;">Modern Minimalist Wooden
+                            Study
+                            Desk
+                            with Scandinavian-Inspired Storage Shelves</p>
+                        <form action="">
+                            <div class="price-set"><del class="del-price">$200 </del> <span
+                                    class="discount-price">$105</span>
+                            </div>
+                            <div class="stars">
+                                ★★★★☆ <span>(4.5/5)</span>
+                            </div>
+                            <div class="product-button001">
+                                <a href="Cart_page.html"><button type="button" id="add">Add to Cart</button></a>
+                                <button type="submit" id="buyButton">BUY NOW</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="product1">
+                    <div class="grid001">
+                        <img class="CategoryImg001" src="images/Electronics12.jpg" alt="ElectronicsImg">
+                        <h3 class="category-title001">Macbook</h3>
+                        <p id="description" style="text-overflow: ellipsis; overflow: hidden;">Modern Minimalist Wooden
+                            Study
+                            Desk
+                            with Scandinavian-Inspired Storage Shelves</p>
+                        <form action="">
+                            <div class="price-set"><del class="del-price">$200 </del> <span
+                                    class="discount-price">$105</span>
+                            </div>
+                            <div class="stars">
+                                ★★★★☆ <span>(4.5/5)</span>
+                            </div>
+                            <div class="product-button001">
+                                <a href="Cart_page.html"><button type="button" id="add">Add to Cart</button></a>
+                                <button type="submit" id="buyButton">BUY NOW</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="product1">
+                    <div class="grid001">
+                        <img class="CategoryImg001" src="images/Electronics12.jpg" alt="ElectronicsImg">
+                        <h3 class="category-title001">Macbook</h3>
+                        <p id="description" style="text-overflow: ellipsis; overflow: hidden;">Modern Minimalist Wooden
+                            Study
+                            Desk
+                            with Scandinavian-Inspired Storage Shelves</p>
+                        <form action="">
+                            <div class="price-set"><del class="del-price">$200 </del> <span
+                                    class="discount-price">$105</span>
+                            </div>
+                            <div class="stars">
+                                ★★★★☆ <span>(4.5/5)</span>
+                            </div>
+                            <div class="product-button001">
+                                <a href="Cart_page.html"><button type="button" id="add">Add to Cart</button></a>
+                                <button type="submit" id="buyButton">BUY NOW</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="product1">
+                    <div class="grid001">
+                        <img class="CategoryImg001" src="images/Electronics12.jpg" alt="ElectronicsImg">
+                        <h3 class="category-title001">Macbook</h3>
+                        <p id="description" style="text-overflow: ellipsis; overflow: hidden;">Modern Minimalist Wooden
+                            Study
+                            Desk
+                            with Scandinavian-Inspired Storage Shelves</p>
+                        <form action="">
+                            <div class="price-set"><del class="del-price">$200 </del> <span
+                                    class="discount-price">$105</span>
+                            </div>
+                            <div class="stars">
+                                ★★★★☆ <span>(4.5/5)</span>
+                            </div>
+                            <div class="product-button001">
+                                <a href="Cart_page.html"><button type="button" id="add">Add to Cart</button></a>
+                                <button type="submit" id="buyButton">BUY NOW</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="characterstics001">
+            <div class="characterstics001-sub">
+                <div class="character-data001">
+                    <div class="inner-data001">
+                        <div class="inner-text0001">Riya Sharma</div>
+                        <div class="inner-text0002">"I ordered for the first time and was very happy with the experience. The product matched the photos exactly, was well-packaged, and arrived on time. I got regular updates about my order, which made the process smooth and stress-free. The quality is impressive and definitely worth the price. It's rare to find such reliable service online these days. I'll definitely shop here again and would recommend this site to others without hesitation."</div>
+                    </div>
+                </div>
+            </div>
+            <div class="characterstics001-sub">
+                <div class="character-data001">
+                    <div class="inner-data001">
+                        <div class="inner-text0001">Amit Verma</div>
+                        <div class="inner-text0002">"This site has become my go-to for online shopping. The quality is always top-notch and everything I've ordered so far has been authentic and true to size. I love how easy the site is to navigate, even on mobile. Delivery is fast, and the return policy is straightforward. Customer support is responsive and helpful, which really makes a difference. Overall, a trustworthy and smooth shopping experience that I've already recommended to several friends."</div>
+                    </div>
+                </div>
+            </div>
+            <div class="characterstics001-sub">
+                <div class="character-data001">
+                    <div class="inner-data001">
+                        <div class="inner-text0001">Neha Joshi</div>
+                        <div class="inner-text0002">"Every order I've placed has arrived on time and in great condition. The product descriptions are accurate, and what you see is exactly what you get. I love the attention to detail in packaging, and tracking my order was simple. I had one issue with a payment and it was resolved quickly by their support team. Great service, excellent quality, and a user-friendly site—I've become a regular buyer and always look forward to my next order."
+
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-main-head1">
+                <a href="#"><img class="footer-text" src="images/LOGO.png" alt="logoFooter"></a>
+                <p class="footer-text1">Discover a world of endless possibilities and shop smart at UrbanTreasure, your
+                    ultimate destination for quality and convenience.</p>
+            </div>
+            <div class="footer-main-head2">
+                <h3 class="footer-text2">Quick Links</h3>
+                <ul>
+                    <li><a href="Main.html" class="footer-text1">Home</a></li>
+                    <li><a href="#" class="footer-text1">Shop</a></li>
+                    <li><a href="Categories.html" class="footer-text1">Categories</a></li>
+                    <li><a href="Aboutus.html" class="footer-text1">About</a></li>
+                    <li><a href="LOGIN_page.html" class="footer-text1">Login/Register</a></li>
+                </ul>
+            </div>
+            <div class="footer-main-head3">
+                <h3 class="footer-text3">Get in touch</h3>
+                <ul>
+                    <li><a href="mailto:urbantreasure269@gmail.com" class="footer-text5">📧 urbantreasure@gmail.com</a>
+                    </li>
+                    <li><a href="tel:+919876543210" class="footer-text5">📞 +91 98765 43210</a></li>
+                    <li><a href="https://www.google.com/maps/place/Gill+Park,+Gill+Road,+Ludhiana,+Punjab"
+                            target="_blank" class="footer-text5">📍 Gill Park, Near Gill Road, Ludhiana, Punjab 141003
+                        </a></li>
+                </ul>
+            </div>
+            <div class="footer-main-head4">
+                <h3 class="footer-text4">Subscribe us</h3>
+                <p class="footer-text1">Get our latest news, updates, special offers. Enter your e-mail and subscribe to
+                    our website.</p>
+                <div class="input-field"><input type="email" class="text-input01" placeholder="Enter your E-mail">
+                    <button type="submit" class="send01"><a href="#"><img class="sendImg" src="images/Send.png"
+                                alt="sendImg"></a></button>
+                </div>
+            </div>
+
+        </div>
+        <div><img class="footer-Img" src="images/Footer.png" alt="footerImage"></div>
+        <div class="footer1">
+            <h2><a href="#" class="decoration">Terms and Conditions</a> | <a href="#" class="decoration">Privacy
+                    Policy</a> | <a href="#" class="decoration">Return Policy</a> |
+                <a href="#" class="decoration">Disclaimer</a>
+            </h2>
+            <h2><span class="footer2">&copy; 2025 UrbanTreasure. All rights reserved.</span> | Design & Developed by
+                Pisoft Informatics Pvt Ltd</h2>
+        </div>
+    </footer>
+
+        <script>
+        const dropdown = document.querySelector(".dropdown001");
+        const dropdownContent = document.querySelector(".dropdown-content001");
+
+        dropdown.addEventListener("click",function(event){
+            event.stopPropagation();
+            dropdownContent.style.display=dropdownContent.style.display==="block" ? "none":"block";
+
+        });
+        window.addEventListener("click", function(){ 
+            dropdownContent.style.display="none";
+        });
+
+    </script>
+</body>
+
+</html>

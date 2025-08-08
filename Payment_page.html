@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping site </title>
+    <link rel="stylesheet" href="Main.css">
+    <style>
+        .table-main001 {
+            margin-left: 80px;
+            margin-right: 70px;
+        }
+
+        .table001 {
+            width: 100%;
+            background-color: #2a2a2a;
+            border-radius: 8px;
+        }
+
+        .table-h001 {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #3a3a3a;
+            background-color: #333333;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .table-d001 {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #3a3a3a;
+            color: #d0d0d0;
+            
+        }
+        .table-remove001 {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #3a3a3a;
+            color: #d0d0d0;
+            width: 100px;
+            
+        }
+
+        .product-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 4px;
+            margin-left: 60px;
+        }
+
+        .table-img001{
+            width: 200px;
+            height: 100px;
+        }
+
+        .button-quantity001 {
+            background-color: #444444;
+            color: #ffffff;
+            border: none;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-right: 10px;
+            padding-left: 10px;
+            margin-left: 5px;
+            margin-right: 5px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .remove001 {
+            background-color: #ff4d4d;
+            color: #ffffff;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-left: 10px;
+            transition: background-color 0.3s;
+            
+        }
+
+        .remove001:hover {
+            background-color: #cc0000;
+        }
+
+        .cart-all001{
+            margin-top: 100px;
+            display: flex;
+            flex-direction: row;
+            column-gap: 70px;
+            justify-content: center;
+        }
+        .cart-discount001{
+            width: 650px;
+            height: 300px;
+            /* border: 1px solid white; */
+            background-color: #2a2a2a;
+            border-radius: 12px;
+        }
+
+        .discount-head001{
+            color: #a05eff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .discount-head002{
+            color: #a05eff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .discount-input001{
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 30px;
+            width: 400px;
+            background-color: rgb(218, 218, 218);
+        }
+
+        .discount-input001:focus{
+            outline: none;
+        }
+        .inner-cart001{
+            margin: 20px;
+            
+            display: flex;
+            flex-direction: column;
+        }
+        .inner-cart002{
+            margin: 30px;
+            /* margin-right: 30px; */
+
+        }
+
+        .discount-button001{
+            border: none;
+            margin-left: 5px;
+            height: 46px;
+            margin-top: 30px;
+            width: 150px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 5px;
+            background-color: #a05eff;
+            margin-top: 0px;
+            color: white;
+            font-size: 15px;
+            transition:  0.2s ease-in 0s;
+        }
+        .discount-button001:hover{
+            color: black;
+            display: inline-block;
+            background-color: #852fff;
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+        
+        .discount-button002:hover{
+            color: black;
+            background-color: #852fff;
+            transform: scale(1.03);
+            cursor: pointer;
+        }
+        .discount-button002{
+            transition:  0.2s ease-in 0s;
+            border: none;
+            width: 100%;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border-radius: 5px;
+            background-color: #a05eff;
+            margin-top: 20px;
+            color: white;
+            font-size: 15px;
+        }
+        .cart-total001{
+            width: 600px;
+            height: 350px;
+            /* border: 1px solid white; */
+            background-color: #2a2a2a;
+            border-radius: 12px;
+
+        }
+        .table-main002{
+            margin-top: px;
+            color: white;
+            width: 100%;
+        }
+
+        .td-table001{
+            margin-right: 20px;
+            font-size: 25px;
+            border-bottom: 1px solid rgb(88, 88, 88);
+            padding-top: 30px;
+        }
+        .th-table001{
+            font-size: 25px;
+            border-bottom: 1px solid rgb(88, 88, 88);
+            padding-top: 30px;
+        }
+        .label-001{
+            display: inline-block;
+        }
+
+        #id1{
+            color:white;
+        }
+        #id2{
+            color: white;
+        }
+
+        .dropdown001{
+            position: relative;
+            right: -210px;
+            top: 19px;
+        }
+        .dropdown001:hover{
+            cursor: pointer;
+        }
+
+        .dropdown-content001{
+             display: none;
+            position: absolute;
+
+            top:75px;
+            right: 310px;
+            background-color: white;
+            border: 1px solid rgba(128, 128, 128, 0.632);
+            border-radius: 0px 0px 10px 10px;
+            min-width: 150px;
+        }
+        .dropdown-content001 a{
+            display: block;
+            padding: 10px;
+            text-align: center;
+            color:black;
+            text-decoration: none;
+
+         }
+         .a10{
+            
+            border-bottom: 1px solid rgba(128, 128, 128, 0.632);
+
+         }
+        
+    </style>
+</head>
+
+<body style="background:linear-gradient(to top right, black,black, rgb(29, 29, 29),black,black)">
+    <header class="head">
+        <div class="nav_bar">
+            <nav>
+                <ul>
+                    <li class="nav"><a href="Main.html" class="a1 logo"><img class="urban" src="images/LOGO.png"
+                                alt="">Urban<span class="cap">T</span>reasure</a></li>
+                    <li class="nav"><a href="Main.html" class="a1 a8 home">Home</a></li>
+                    <li class="nav"><a href="Shop_page.html" class="a1 a8">Shop</a></li>
+                    <li class="nav"><a href="Categories.html" class="a1 a8">Categories</a></li>
+                    <li class="nav"><a href="Aboutus.html" class="a1 a8">About</a></li>
+                    <li class="nav"><a href="Contact.html" class="a1 a8">Contact</a></li>
+                    <li class="nav"><div class="a1 a8 choose3 dropdown001"><img
+                                src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/profile-52e0dc.svg"
+                                alt="Login" class="_1XmrCc _2zJ7Pb" width="24" height="24"></div>
+                            <div class="dropdown-content001">
+                                <a  class="a10"href="Registeration_Page.html">Register / Signup</a>
+                                <a class="a20" href="LOGIN_page.html">Login?</a>
+                            </div></li>
+                    <li class="nav"><a href="Cart_page.html" class="a1 a8 choose2"><img
+                                src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_cart-eed150.svg"
+                                alt="Cart" class="_1XmrCc" width="24" height="24"></a></li>
+                    <li class="nav">
+                        <label id="id1" class="choose">Choose Language :</label>
+                        <select class="choose1" name="Language" id="id1">
+                            <option disabled>--Select Language--</option>
+                            <option value="English" selected>English</option>
+                            <option value="Hindi">Hindi</option>
+                            <option value="French">French</option>
+                            <option value="es">Spanish</option>
+                            <option value="de">German</option>
+                            <option value="zh">Chinese (Mandarin)</option>
+                            <option value="ja">Japanese</option>
+                            <option value="ko">Korean</option>
+                            <option value="ar">Arabic</option>
+                            <option value="ru">Russian</option>
+                            <option value="pt">Portuguese</option>
+                            <option value="it">Italian</option>
+                            <option value="bn">Bengali</option>
+                            <option value="pa">Punjabi</option>
+                            <option value="ta">Tamil</option>
+                            <option value="te">Telugu</option>
+                            <option value="gu">Gujarati</option>
+                            <option value="mr">Marathi</option>
+                            <option value="ur">Urdu</option>
+                            <option value="fa">Persian</option>
+                            <option value="tr">Turkish</option>
+                            <option value="vi">Vietnamese</option>
+                            <option value="th">Thai</option>
+                            <option value="sw">Swahili</option>
+                        </select>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="section1" >
+
+        <div class="cart-all001">
+            <div class="cart-discount001">
+                <div class="inner-cart001">
+                    <h3 class="discount-head001">Billing details</h3>
+                    <label class="label-001" for="id1">Select Address</label>
+                    <select class="discount-input001" name="Select Address" id="id1">
+                        <option id="id1" selected disabled>-----Select Address-----</option>
+                        <option id="id1" value="#221, Model Town, Ludhiana, Punjab - 141002">#221, Model Town, Ludhiana, Punjab - 141002</option>
+                        <option id="id1" value="IT Park, Phase 8, Mohali, Punjab - 160071">IT Park, Phase 8, Mohali, Punjab - 160071</option>
+                        <option id="id1" value="House No. 45, Green Avenue, Amritsar, Punjab - 143001">House No. 45, Green Avenue, Amritsar, Punjab - 143001</option>
+                        </select>
+                    <button type="submit" class="discount-button001">Add address</button>
+                    <button type="submit" class="discount-button002">Place Order</button>
+                </div>
+            </div>
+            <div class="cart-total001">
+                <div class="inner-cart002">
+                <h3 class="discount-head002">Payment Method</h3>
+                <div>
+                    <table>
+                        <label class id="id2">Radio</label>
+                        <br>
+                        <input type="radio" id="id2" value="Cash on Delivery">Cash on Delivery
+                        <br>
+                        <input type="radio" id="id2" value="Credit/Debit Card">Credit/Debit Card
+                        <br>
+                        <input type="radio" id="id2" value="Net Banking">Net Banking
+                        <br>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </section>
+    <footer>
+        <div class="footer">
+            <div class="footer-main-head1">
+                <a href="#"><img class="footer-text" src="images/LOGO.png" alt="logoFooter"></a>
+                <p class="footer-text1">Discover a world of endless possibilities and shop smart at UrbanTreasure, your
+                    ultimate destination for quality and convenience.</p>
+            </div>
+            <div class="footer-main-head2">
+                <h3 class="footer-text2">Quick Links</h3>
+                <ul>
+                    <li><a href="#" class="footer-text1">Home</a></li>
+                    <li><a href="#" class="footer-text1">Shop</a></li>
+                    <li><a href="#" class="footer-text1">Categories</a></li>
+                    <li><a href="#" class="footer-text1">About</a></li>
+                    <li><a href="LOGIN_page.html" class="footer-text1">Login/Register</a></li>
+                </ul>
+            </div>
+            <div class="footer-main-head3">
+                <h3 class="footer-text3">Get in touch</h3>
+                <ul>
+                    <li><a href="mailto:urbantreasure269@gmail.com" class="footer-text5">📧 urbantreasure@gmail.com</a>
+                    </li>
+                    <li><a href="tel:+919876543210" class="footer-text5">📞 +91 98765 43210</a></li>
+                    <li><a href="https://www.google.com/maps/place/Gill+Park,+Gill+Road,+Ludhiana,+Punjab"
+                            target="_blank" class="footer-text5">📍 Gill Park, Near Gill Road, Ludhiana, Punjab 141003
+                        </a></li>
+                </ul>
+            </div>
+            <div class="footer-main-head4">
+                <h3 class="footer-text4">Subscribe us</h3>
+                <p class="footer-text1">Get our latest news, updates, special offers. Enter your e-mail and subscribe to
+                    our website.</p>
+                <div class="input-field"><input type="email" class="text-input01" placeholder="Enter your E-mail">
+                    <button type="submit" class="send01"><a href="#"><img class="sendImg" src="images/Send.png"
+                                alt="sendImg"></a></button>
+                </div>
+            </div>
+
+        </div>
+        <div><img class="footer-Img" src="images/Footer.png" alt="footerImage"></div>
+        <div class="footer1">
+            <h2><a href="#" class="decoration">Terms and Conditions</a> | <a href="#" class="decoration">Privacy
+                    Policy</a> | <a href="#" class="decoration">Return Policy</a> |
+                <a href="#" class="decoration">Disclaimer</a>
+            </h2>
+            <h2><span class="footer2">&copy; 2025 UrbanTreasure. All rights reserved.</span> | Design & Developed by
+                Pisoft Informatics Pvt Ltd</h2>
+        </div>
+    </footer>
+                    <script>
+        const dropdown = document.querySelector(".dropdown001");
+        const dropdownContent = document.querySelector(".dropdown-content001");
+
+        dropdown.addEventListener("click",function(event){
+            event.stopPropagation();
+            dropdownContent.style.display=dropdownContent.style.display==="block" ? "none":"block";
+
+        });
+        window.addEventListener("click", function(){ 
+            dropdownContent.style.display="none";
+        });
+
+    </script>
+</body>
+
+</html>
