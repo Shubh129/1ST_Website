@@ -7,52 +7,11 @@
     <title>Online Shopping site </title>
     <link rel="stylesheet" href="Main.css">
     <style>
-        .table-main001 {
-            margin-left: 80px;
-            margin-right: 70px;
-        }
-
-        .table001 {
-            width: 100%;
-            background-color: #2a2a2a;
-            border-radius: 8px;
-        }
-
-        .table-h001 {
-            padding: 15px;
-            text-align: left;
-            border-bottom: 1px solid #3a3a3a;
-            background-color: #333333;
-            color: #ffffff;
-            font-weight: bold;
-        }
-
-        .table-d001 {
-            padding: 15px;
-            text-align: left;
-            border-bottom: 1px solid #3a3a3a;
-            color: #d0d0d0;
-            
-        }
-        .table-remove001 {
-            padding: 15px;
-            text-align: left;
-            border-bottom: 1px solid #3a3a3a;
-            color: #d0d0d0;
-            width: 100px;
-            
-        }
-
         .product-img {
             width: 80px;
             height: 80px;
             border-radius: 4px;
             margin-left: 60px;
-        }
-
-        .table-img001{
-            width: 200px;
-            height: 100px;
         }
 
         .button-quantity001 {
@@ -134,6 +93,7 @@
         }
         .inner-cart002{
             margin: 30px;
+            position: relative;
             /* margin-right: 30px; */
 
         }
@@ -187,31 +147,13 @@
             border-radius: 12px;
 
         }
-        .table-main002{
-            margin-top: px;
-            color: white;
-            width: 100%;
-        }
 
-        .td-table001{
-            margin-right: 20px;
-            font-size: 25px;
-            border-bottom: 1px solid rgb(88, 88, 88);
-            padding-top: 30px;
-        }
-        .th-table001{
-            font-size: 25px;
-            border-bottom: 1px solid rgb(88, 88, 88);
-            padding-top: 30px;
-        }
         .label-001{
             display: inline-block;
         }
 
-        #id1{
-            color:white;
-        }
-        #id2{
+       
+        #id18{
             color: white;
         }
 
@@ -248,6 +190,12 @@
             border-bottom: 1px solid rgba(128, 128, 128, 0.632);
 
          }
+         .btns-action0001{
+            color: blue;
+         }
+         .payment001{
+            color: white;
+         }
         
     </style>
 </head>
@@ -259,7 +207,7 @@
                 <ul>
                     <li class="nav"><a href="index.html" class="a1 logo"><img class="urban" src="images/LOGO.png"
                                 alt="">Urban<span class="cap">T</span>reasure</a></li>
-                    <li class="nav"><a href="Main.html" class="a1 a8 home">Home</a></li>
+                    <li class="nav"><a href="index.html" class="a1 a8 home">Home</a></li>
                     <li class="nav"><a href="Shop_page.html" class="a1 a8">Shop</a></li>
                     <li class="nav"><a href="Categories.html" class="a1 a8">Categories</a></li>
                     <li class="nav"><a href="Aboutus.html" class="a1 a8">About</a></li>
@@ -314,7 +262,7 @@
             <div class="cart-discount001">
                 <div class="inner-cart001">
                     <h3 class="discount-head001">Billing details</h3>
-                    <label class="label-001" for="id1">Select Address</label>
+                    <label class="label-001" for="id12">Select Address</label>
                     <select class="discount-input001" name="Select Address" id="id1">
                         <option id="id1" selected disabled>-----Select Address-----</option>
                         <option id="id1" value="#221, Model Town, Ludhiana, Punjab - 141002">#221, Model Town, Ludhiana, Punjab - 141002</option>
@@ -328,17 +276,17 @@
             <div class="cart-total001">
                 <div class="inner-cart002">
                 <h3 class="discount-head002">Payment Method</h3>
-                <div>
-                    <table>
-                        <label class id="id2">Radio</label>
+                <div class="btns-action0001">
+                    <form>
+                        <label class id="id18">Radio</label>
                         <br>
-                        <input type="radio" id="id2" value="Cash on Delivery">Cash on Delivery
+                        <input type="radio" id="id18" value="Cash on Delivery"><span class="payment001">Cash on Delivery</span>
                         <br>
-                        <input type="radio" id="id2" value="Credit/Debit Card">Credit/Debit Card
+                        <input type="radio" id="id18" value="Credit/Debit Card"><span class="payment001">Credit/Debit Card</span>
                         <br>
-                        <input type="radio" id="id2" value="Net Banking">Net Banking
+                        <input type="radio" id="id18" value="Net Banking"><span class="payment001">Net Banking</span>
                         <br>
-                    </table>
+                    </form>
                 </div>
 
             </div>
