@@ -1170,6 +1170,9 @@ body {
 .footer-text1{
     color: white;
     font-size: 15px;
+     font-family: "Boldonse", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 .footer-main-head4 p{
     margin-top: 20px;
