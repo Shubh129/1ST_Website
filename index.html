@@ -79,10 +79,12 @@
             padding-left: 12px;
             background-color: rgb(218, 218, 218);
         }
-        .search-input1:focus{
+
+        .search-input1:focus {
             outline: none;
         }
-        .search-input2:focus{
+
+        .search-input2:focus {
             outline: none;
         }
 
@@ -213,11 +215,12 @@
         }
 
         .characterstics001-sub {
-            border: 1px solid white;
+            border: 1px solid rgb(0, 0, 0);
             border-radius: 12px;
             height: 400px;
             width: 350px;
             background-color: white;
+            box-shadow: 2px 2px 5px black;
         }
 
         /* .characterstics001-sub:hover{
@@ -227,7 +230,7 @@
 
         /* .character-data001 {}*/
 
-       
+
 
         .inner-image001 {
             width: 150px;
@@ -244,9 +247,9 @@
             font-weight: bolder;
             font-size: 20px;
         }
-        
+
         .inner-text002 {
-            
+
             font-family: "Open Sans", "Roboto", Arial, Helvetica, sans-serif;
             font-size: 15px;
             line-height: 1.4;
@@ -256,7 +259,7 @@
             text-align: center;
             color: black;
         }
-        
+
         .inner-text0001 {
             font-family: 'Montserrat', sans-serif;
             margin-top: 30px;
@@ -265,8 +268,9 @@
             font-weight: lighter;
             font-size: 20px;
         }
+
         .inner-text0002 {
-            
+
             font-family: "Open Sans", "Roboto", Arial, Helvetica, sans-serif;
             font-size: 15px;
             line-height: 1.5;
@@ -276,43 +280,56 @@
             margin-top: 20px;
             color: rgb(92, 92, 92);
         }
-        .dropdown001{
+
+        .dropdown001 {
             position: relative;
             right: -210px;
             top: 19px;
         }
-        .dropdown001:hover{
+
+        .dropdown001:hover {
             cursor: pointer;
         }
 
-        .dropdown-content001{
-             display: none;
+        .dropdown-content001 {
+            display: none;
             position: absolute;
 
-            top:75px;
+            top: 75px;
             right: 310px;
             background-color: white;
             border: 1px solid rgba(128, 128, 128, 0.632);
             border-radius: 0px 0px 10px 10px;
             min-width: 150px;
         }
-        .dropdown-content001 a{
+
+        .dropdown-content001 a {
             display: block;
             padding: 10px;
             text-align: center;
-            color:black;
+            color: black;
             text-decoration: none;
 
-         }
-         .a10{
-            
+        }
+
+        .a10 {
+
             border-bottom: 1px solid rgba(128, 128, 128, 0.632);
 
-         }
+        }
+
+        body,#review002,#review001,#review003,
+        .outer-box001,
+        footer {
+            transition: background-color 0.5s, white 0.3s;
+        }
+        .outer-box001,.outer-box002,.outer-box003{
+            transition: background-color 0.4s, white 0.3s;
+        }
     </style>
 </head>
 
-<body  style="background:linear-gradient(to top right, black,black, rgb(29, 29, 29),black,black)">
+<body id="body" style="background-color:black ;">
     <header class="head">
         <div class="nav_bar">
             <nav>
@@ -324,46 +341,21 @@
                     <li class="nav"><a href="Categories.html" class="a1 a8">Categories</a></li>
                     <li class="nav"><a href="Aboutus.html" class="a1 a8">About</a></li>
                     <li class="nav"><a href="Contact.html" class="a1 a8">Contact</a></li>
-                    <li class="nav"><div class="a1 a8 choose3 dropdown001"><img
+                    <li class="nav">
+                        <div class="a1 a8 choose3 dropdown001"><img
                                 src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/profile-52e0dc.svg"
                                 alt="Login" class="_1XmrCc _2zJ7Pb" width="24" height="24"></div>
-                            <div class="dropdown-content001">
-                                <a  class="a10"href="Registeration_Page.html">Signup</a>
-                                <a class="a20" href="LOGIN_page.html">Login?</a>
-                            </div>
-                            </li>
+                        <div class="dropdown-content001">
+                            <a class="a10" href="Registeration_Page.html">Signup</a>
+                            <a class="a20" href="LOGIN_page.html">Login?</a>
+                        </div>
+                    </li>
                     <li class="nav"><a href="Cart_page.html" class="a1 a8 choose2"><img
                                 src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_cart-eed150.svg"
                                 alt="Cart" class="_1XmrCc" width="24" height="24"></a></li>
                     <li class="nav">
-                        <label id="id1" class="choose">Choose Language :</label>
-                        <select class="choose1" name="Language" id="id1">
-                            <option disabled>--Select Language--</option>
-                            <option value="English" selected>English</option>
-                            <option value="Hindi">Hindi</option>
-                            <option value="French">French</option>
-                            <option value="es">Spanish</option>
-                            <option value="de">German</option>
-                            <option value="zh">Chinese (Mandarin)</option>
-                            <option value="ja">Japanese</option>
-                            <option value="ko">Korean</option>
-                            <option value="ar">Arabic</option>
-                            <option value="ru">Russian</option>
-                            <option value="pt">Portuguese</option>
-                            <option value="it">Italian</option>
-                            <option value="bn">Bengali</option>
-                            <option value="pa">Punjabi</option>
-                            <option value="ta">Tamil</option>
-                            <option value="te">Telugu</option>
-                            <option value="gu">Gujarati</option>
-                            <option value="mr">Marathi</option>
-                            <option value="ur">Urdu</option>
-                            <option value="fa">Persian</option>
-                            <option value="tr">Turkish</option>
-                            <option value="vi">Vietnamese</option>
-                            <option value="th">Thai</option>
-                            <option value="sw">Swahili</option>
-                        </select>
+                        <label id="id1" class="choose">Theme :</label>
+                        <button id="button001" class="choose1" onclick="toggle()">Light</button>
                     </li>
                 </ul>
             </nav>
@@ -378,7 +370,7 @@
         <img src="images/Main.jpg" class="main-img main-products001" alt="MainImg">
     </div>
 
-    <section class="section1" >
+    <section class="section1">
         <div class="characterstics001">
             <div class="characterstics001-sub">
                 <div class="character-data001">
@@ -389,7 +381,7 @@
                     </div>
                 </div>
             </div>
-            <div class="characterstics001-sub">
+            <div class="characterstics001-sub characterstics002-sub">
                 <div class="character-data001">
                     <div class="inner-data001"><img class="inner-image001" src="images/QualityAssured.jpg" alt="">
                         <div class="inner-text001">Quality Assured</div>
@@ -398,7 +390,7 @@
                     </div>
                 </div>
             </div>
-            <div class="characterstics001-sub">
+            <div class="characterstics001-sub characterstics003-sub">
                 <div class="character-data001">
                     <div class="inner-data001"><img class="inner-image001" src="images/Quality.jpg" alt="">
                         <div class="inner-text001">Secure & Smart Packaging</div>
@@ -409,7 +401,7 @@
                     </div>
                 </div>
             </div>
-            <div class="characterstics001-sub">
+            <div class="characterstics001-sub characterstics004-sub">
                 <div class="character-data001">
                     <div class="inner-data001"><img class="inner-image001" src="images/Value_for_money.jpg" alt="">
                         <div class="inner-text001">Value for Money</div>
@@ -433,9 +425,9 @@
         </div>
 
         <div class="Category-Close">
-            <h2 class="head-title001">Categories</h2>
+            <h2 class="head-title001" id="heading001">Categories</h2>
             <div class="section-main001">
-                <div class="outer-box001">
+                <div class="outer-box001" id="categoryid">
                     <div class="grid-main001">
                         <div class="grid0001">
                             <img class="CategoryImg0001" src="images/Stream_Setup.jpg" alt="Stream&SetupImg">
@@ -448,7 +440,7 @@
                     </div>
                 </div>
 
-                <div class="outer-box002">
+                <div class="outer-box002" id="categoryid1">
                     <div class="grid-main001">
                         <div class="grid0001">
                             <img class="CategoryImg0001" src="images/Home_Living.jpg" alt="Home&LivingImg">
@@ -463,7 +455,7 @@
             </div>
 
             <div class="section-main003">
-                <div class="outer-box003">
+                <div class="outer-box003" id="categoryid2">
                     <div class="grid-main001">
                         <div class="grid0001">
                             <img class="CategoryImg0001" src="images/Toys_Games.jpg" alt="Toys&GamesImg">
@@ -475,7 +467,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="outer-box001">
+                <div class="outer-box001" id="categoryid3">
                     <div class="grid-main001">
                         <div class="grid0001">
                             <img class="CategoryImg0001" src="images/Electronics12.jpg" alt="ElectronicsImg">
@@ -491,7 +483,7 @@
         </div>
 
         <div class="Category-Close001">
-            <h2 class="head-title001">Shop</h2>
+            <h2 class="head-title001" id="heading002">Shop</h2>
             <div class="section001">
                 <div class="product1">
                     <div class="grid001">
@@ -509,7 +501,7 @@
                                 ★★★★☆ <span>(4.5/5)</span>
                             </div>
                             <div class="product-button001">
-                                <a href="Cart_page.html"><button type="button" id="add">Add to Cart</button></a>
+                                <button type="button" id="add">Add to Cart</button>
                                 <button type="submit" id="buyButton">BUY NOW</button>
                             </div>
                         </form>
@@ -532,7 +524,7 @@
                                 ★★★★☆ <span>(4/5)</span>
                             </div>
                             <div class="product-button001">
-                                <a href="Cart_page.html"><button type="button" id="add">Add to Cart</button></a>
+                                <button type="button" id="add">Add to Cart</button>
                                 <button type="submit" id="buyButton">BUY NOW</button>
                             </div>
                         </form>
@@ -555,7 +547,7 @@
                                 ★★★★☆ <span>(4.5/5)</span>
                             </div>
                             <div class="product-button001">
-                                <a href="Cart_page.html"><button type="button" id="add">Add to Cart</button></a>
+                                <button type="button" id="add">Add to Cart</button>
                                 <button type="submit" id="buyButton">BUY NOW</button>
                             </div>
                         </form>
@@ -578,7 +570,7 @@
                                 ★★★★☆ <span>(4.5/5)</span>
                             </div>
                             <div class="product-button001">
-                                <a href="Cart_page.html"><button type="button" id="add">Add to Cart</button></a>
+                                <button type="button" id="add">Add to Cart</button>
                                 <button type="submit" id="buyButton">BUY NOW</button>
                             </div>
                         </form>
@@ -601,7 +593,7 @@
                                 ★★★★☆ <span>(4.5/5)</span>
                             </div>
                             <div class="product-button001">
-                                <a href="Cart_page.html"><button type="button" id="add">Add to Cart</button></a>
+                                <button type="button" id="add">Add to Cart</button>
                                 <button type="submit" id="buyButton">BUY NOW</button>
                             </div>
                         </form>
@@ -626,7 +618,7 @@
                                 ★★★★☆ <span>(4.5/5)</span>
                             </div>
                             <div class="product-button001">
-                                <a href="Cart_page.html"><button type="button" id="add">Add to Cart</button></a>
+                                <button type="button" id="add">Add to Cart</button>
                                 <button type="submit" id="buyButton">BUY NOW</button>
                             </div>
                         </form>
@@ -649,7 +641,7 @@
                                 ★★★★☆ <span>(4.5/5)</span>
                             </div>
                             <div class="product-button001">
-                                <a href="Cart_page.html"><button type="button" id="add">Add to Cart</button></a>
+                                <button type="button" id="add">Add to Cart</button>
                                 <button type="submit" id="buyButton">BUY NOW</button>
                             </div>
                         </form>
@@ -672,7 +664,7 @@
                                 ★★★★☆ <span>(4.5/5)</span>
                             </div>
                             <div class="product-button001">
-                                <a href="Cart_page.html"><button type="button" id="add">Add to Cart</button></a>
+                                <button type="button" id="add">Add to Cart</button>
                                 <button type="submit" id="buyButton">BUY NOW</button>
                             </div>
                         </form>
@@ -695,7 +687,7 @@
                                 ★★★★☆ <span>(4.5/5)</span>
                             </div>
                             <div class="product-button001">
-                                <a href="Cart_page.html"><button type="button" id="add">Add to Cart</button></a>
+                                <button type="button" id="add">Add to Cart</button>
                                 <button type="submit" id="buyButton">BUY NOW</button>
                             </div>
                         </form>
@@ -718,7 +710,7 @@
                                 ★★★★☆ <span>(4.5/5)</span>
                             </div>
                             <div class="product-button001">
-                                <a href="Cart_page.html"><button type="button" id="add">Add to Cart</button></a>
+                                <button type="button" id="add">Add to Cart</button>
                                 <button type="submit" id="buyButton">BUY NOW</button>
                             </div>
                         </form>
@@ -729,29 +721,44 @@
         </div>
 
         <div class="characterstics001">
-            <div class="characterstics001-sub">
+            <div class="characterstics001-sub" id="review001">
                 <div class="character-data001">
                     <div class="inner-data001">
-                        <div class="inner-text0001">Riya Sharma</div>
-                        <div class="inner-text0002">"I ordered for the first time and was very happy with the experience. The product matched the photos exactly, was well-packaged, and arrived on time. I got regular updates about my order, which made the process smooth and stress-free. The quality is impressive and definitely worth the price. It's rare to find such reliable service online these days. I'll definitely shop here again and would recommend this site to others without hesitation."</div>
+                        <div class="inner-text0001">Piyush Sharma</div>
+                        <div class="inner-text0002" id="reviewtitle001">"I ordered for the first time and was very happy
+                            with the experience. The product matched the photos exactly, was well-packaged, and arrived
+                            on time. I got regular updates about my order, which made the process smooth and
+                            stress-free. The quality is impressive and definitely worth the price. It's rare to find
+                            such reliable service online these days. I'll definitely shop here again and would recommend
+                            this site to others without hesitation."</div>
                     </div>
                 </div>
             </div>
-            <div class="characterstics001-sub">
+            <div class="characterstics001-sub" id="review002">
                 <div class="character-data001">
                     <div class="inner-data001">
-                        <div class="inner-text0001">Amit Verma</div>
-                        <div class="inner-text0002">"This site has become my go-to for online shopping. The quality is always top-notch and everything I've ordered so far has been authentic and true to size. I love how easy the site is to navigate, even on mobile. Delivery is fast, and the return policy is straightforward. Customer support is responsive and helpful, which really makes a difference. Overall, a trustworthy and smooth shopping experience that I've already recommended to several friends."</div>
+                        <div class="inner-text0001">Akshay Gupta</div>
+                        <div class="inner-text0002" id="reviewtitle002">"This site has become my go-to for online
+                            shopping. The quality is always top-notch and everything I've ordered so far has been
+                            authentic and true to size. I love how easy the site is to navigate, even on mobile.
+                            Delivery is fast, and the return policy is straightforward. Customer support is responsive
+                            and helpful, which really makes a difference. Overall, a trustworthy and smooth shopping
+                            experience that I've already recommended to several friends."</div>
                     </div>
                 </div>
             </div>
-            <div class="characterstics001-sub">
+            <div class="characterstics001-sub" id="review003">
                 <div class="character-data001">
                     <div class="inner-data001">
-                        <div class="inner-text0001">Neha Joshi</div>
-                        <div class="inner-text0002">"Every order I've placed has arrived on time and in great condition. The product descriptions are accurate, and what you see is exactly what you get. I love the attention to detail in packaging, and tracking my order was simple. I had one issue with a payment and it was resolved quickly by their support team. Great service, excellent quality, and a user-friendly site—I've become a regular buyer and always look forward to my next order."
+                        <div class="inner-text0001">Mohit Verma</div>
+                        <div class="inner-text0002" id="reviewtitle003">"Every order I've placed has arrived on time and
+                            in great condition. The product descriptions are accurate, and what you see is exactly what
+                            you get. I love the attention to detail in packaging, and tracking my order was simple. I
+                            had one issue with a payment and it was resolved quickly by their support team. Great
+                            service, excellent quality, and a user-friendly site—I've become a regular buyer and always
+                            look forward to my next order."
 
-</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -808,18 +815,108 @@
         </div>
     </footer>
 
-        <script>
+    <script>
         const dropdown = document.querySelector(".dropdown001");
         const dropdownContent = document.querySelector(".dropdown-content001");
 
-        dropdown.addEventListener("click",function(event){
+        dropdown.addEventListener("click", function (event) {
             event.stopPropagation();
-            dropdownContent.style.display=dropdownContent.style.display==="block" ? "none":"block";
+            dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
 
         });
-        window.addEventListener("click", function(){ 
-            dropdownContent.style.display="none";
+        window.addEventListener("click", function () {
+            dropdownContent.style.display = "none";
         });
+
+    </script>
+    <script>
+
+        window.onload = function () {
+            let savedTheme = localStorage.getItem("theme") || "light";
+            let body = document.getElementById("body");
+            let categorybox = document.getElementById("categoryid");
+            let categorybox1 = document.getElementById("categoryid3");
+            let categorybox2 = document.getElementById("categoryid1");
+            let categorybox3 = document.getElementById("categoryid2");
+            let heading = document.getElementById("heading001");
+            let heading2 = document.getElementById("heading002");
+            let reviews1 = document.querySelectorAll("#review001,#review002,#review003");
+            let reviewtitle1 = document.querySelectorAll("#reviewtitle001,#reviewtitle002,#reviewtitle003");
+            let button = document.getElementById("button001");
+            let names = document.querySelectorAll('.inner-text0001');
+            if (savedTheme == "light") {
+                body.style.backgroundColor = "white";
+                categorybox.style.background = "linear-gradient(to top, white, #a05eff)";
+                categorybox1.style.background = "linear-gradient(to top, white, #a05eff)";
+                categorybox2.style.background = "linear-gradient(to top, white, #F0E4D3)";
+                categorybox3.style.background = "linear-gradient(to top, white, #7D7D7D)";
+                reviews1.forEach(r=>r.style.backgroundColor = "#0A1824ff");
+                reviewtitle1.forEach(r=>r.style.color = "white");
+                names.forEach(r=>r.style.color = "orange");
+                heading.style.color = "black";
+                heading2.style.color = "black";
+                button.innerText = "Dark";
+                localStorage.setItem("theme","light");
+            }
+            else {
+                body.style.backgroundColor = "black";
+                categorybox.style.background = "linear-gradient(to top, #000000, #a05eff)";
+                categorybox1.style.background = "linear-gradient(to top, #000000, #a05eff)";
+                categorybox2.style.background = "linear-gradient(to top, #000000, #F0E4D3)";
+                categorybox3.style.background = "linear-gradient(to top, #000000, #7D7D7D)";
+                reviews1.forEach(r=>r.style.backgroundColor = "white");
+                reviewtitle1.forEach(r=>r.style.color = "black");
+                names.forEach(r=>r.style.color = "#5908ca");
+                heading.style.color = "white";
+                heading2.style.color = "white";
+                button.innerText = "Light";
+                localStorage.setItem("theme","dark");
+            }
+        }
+
+
+
+
+        function toggle() {
+            let body = document.getElementById("body");
+            let button = document.getElementById("button001");
+            let heading1 = document.getElementById("heading001");
+            let heading2 = document.getElementById("heading002");
+            let reviewsbox = document.querySelectorAll("#review001,#review002,#review003");
+            let reviews = document.querySelectorAll('.inner-text0002');
+            let names = document.querySelectorAll('.inner-text0001');
+            let categorybox = document.getElementById("categoryid");
+            let categorybox1 = document.getElementById("categoryid3");
+            let categorybox2 = document.getElementById("categoryid1");
+            let categorybox3 = document.getElementById("categoryid2");
+
+            let currentTheme = localStorage.getItem("theme") || "light";
+            let isLight = currentTheme === "light";
+
+            // Set colors
+            body.style.backgroundColor = isLight ? "black" : "white";
+            reviewsbox.forEach(box => {
+                box.style.backgroundColor = isLight ? "white" : "#0A1824ff";
+            });
+            
+                names.forEach(r => {
+                    r.style.color = isLight ? "#5908ca" : "orange";
+                });
+                categorybox.style.background = isLight ? "linear-gradient(to top, #000000, #a05eff)" : "linear-gradient(to top, white, #a05eff)";
+                categorybox1.style.background = isLight ? "linear-gradient(to top, #000000, #a05eff)" : "linear-gradient(to top, white, #a05eff)";
+                categorybox2.style.background = isLight ? "linear-gradient(to top, #000000, #F0E4D3)" : "linear-gradient(to top, white, #F0E4D3)";
+                categorybox3.style.background = isLight ? "linear-gradient(to top, #000000, #7D7D7D)" : "linear-gradient(to top, white, #7D7D7D)";
+            heading1.style.color = isLight ? "white" : "black";
+            heading2.style.color = isLight ? "white" : "black";
+            button.innerText = isLight ? "Light" : "Dark";
+
+            reviews.forEach(review => {
+                review.style.color = isLight ? "black" : "white";
+            });
+
+
+            localStorage.setItem("theme", isLight ? "dark" : "light");
+        }
 
     </script>
 </body>

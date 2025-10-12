@@ -66,34 +66,8 @@
                                 src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_cart-eed150.svg"
                                 alt="Cart" class="_1XmrCc" width="24" height="24"></a></li>
                     <li class="nav">
-                        <label id="id1" class="choose">Choose Language :</label>
-                        <select class="choose1" name="Language" id="id1">
-                            <option disabled>--Select Language--</option>
-                            <option value="English" selected>English</option>
-                            <option value="Hindi">Hindi</option>
-                            <option value="French">French</option>
-                            <option value="es">Spanish</option>
-                            <option value="de">German</option>
-                            <option value="zh">Chinese (Mandarin)</option>
-                            <option value="ja">Japanese</option>
-                            <option value="ko">Korean</option>
-                            <option value="ar">Arabic</option>
-                            <option value="ru">Russian</option>
-                            <option value="pt">Portuguese</option>
-                            <option value="it">Italian</option>
-                            <option value="bn">Bengali</option>
-                            <option value="pa">Punjabi</option>
-                            <option value="ta">Tamil</option>
-                            <option value="te">Telugu</option>
-                            <option value="gu">Gujarati</option>
-                            <option value="mr">Marathi</option>
-                            <option value="ur">Urdu</option>
-                            <option value="fa">Persian</option>
-                            <option value="tr">Turkish</option>
-                            <option value="vi">Vietnamese</option>
-                            <option value="th">Thai</option>
-                            <option value="sw">Swahili</option>
-                        </select>
+                        <label id="id1" class="choose">Theme :</label>
+                        <button id="button001" class="choose1" onclick="toggle()">White</button>
                     </li>
                 </ul>
             </nav>
@@ -237,6 +211,47 @@
         });
 
     </script>
+
+        <script>
+
+    window.onload=function (){
+        let savedTheme = localStorage.getItem("theme");
+        let body = document.getElementById("body");
+        let heading = document.getElementById("heading001");
+        let button = document.getElementById("button001");
+        if(savedTheme == "light"){
+            body.style.backgroundColor = "white";
+            heading.style.color = "black";
+            button.innerText = "Black";
+        }
+        else{
+            body.style.backgroundColor = "black";
+            heading.style.color = "white";
+            button.innerText = "White";
+        }
+    }
+
+
+
+
+    function toggle(){
+        let body = document.getElementById("body");
+        let button = document.getElementById("button001");
+        let heading = document.getElementById("heading001");
+        if(body.style.backgroundColor == "white"){
+            body.style.backgroundColor = "black";
+            heading.style.color = "white";
+            button.innerText = "White";
+            localStorage.setItem("theme","dark");
+        }
+        else {
+            body.style.backgroundColor = "white";
+            heading.style.color ="black";
+            button.innerText = "Black";
+            localStorage.setItem("theme","light");
+        }
+    }
+</script>
 </body>
 
 </html>

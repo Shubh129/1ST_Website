@@ -257,34 +257,8 @@
                                 src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_cart-eed150.svg"
                                 alt="Cart" class="_1XmrCc" width="24" height="24"></a></li>
                     <li class="nav">
-                        <label id="id1" class="choose">Choose Language :</label>
-                        <select class="choose1" name="Language" id="id1">
-                            <option disabled>--Select Language--</option>
-                            <option value="English" selected>English</option>
-                            <option value="Hindi">Hindi</option>
-                            <option value="French">French</option>
-                            <option value="es">Spanish</option>
-                            <option value="de">German</option>
-                            <option value="zh">Chinese (Mandarin)</option>
-                            <option value="ja">Japanese</option>
-                            <option value="ko">Korean</option>
-                            <option value="ar">Arabic</option>
-                            <option value="ru">Russian</option>
-                            <option value="pt">Portuguese</option>
-                            <option value="it">Italian</option>
-                            <option value="bn">Bengali</option>
-                            <option value="pa">Punjabi</option>
-                            <option value="ta">Tamil</option>
-                            <option value="te">Telugu</option>
-                            <option value="gu">Gujarati</option>
-                            <option value="mr">Marathi</option>
-                            <option value="ur">Urdu</option>
-                            <option value="fa">Persian</option>
-                            <option value="tr">Turkish</option>
-                            <option value="vi">Vietnamese</option>
-                            <option value="th">Thai</option>
-                            <option value="sw">Swahili</option>
-                        </select>
+                        <label id="id1" class="choose">Theme :</label>
+                        <button id="button001" class="choose1" onclick="toggle()">White</button>
                     </li>
                 </ul>
             </nav>
@@ -293,91 +267,48 @@
     <section class="section1" >
         <div class="table-main001">
             <table class="table001">
-                    <tr>
-                        <th class="table-h001">Product</th>
-                        <th class="table-h001">Description</th>
-                        <th class="table-h001">Price</th>
-                        <th class="table-h001">Quantity</th>
-                        <th class="table-h001">Total</th>
-                        <th class="table-h001">Remove</th>
-                    </tr>
-                    <tr>
-                        <td class="table-img001"><img src="images/image11.webp" alt="Product 1" class="product-img"></td>
-                        <td class="table-d001">Headphones</td>
-                        <td class="table-d001">₹3600</td>
-                        <td class="table-d001">
-                            <div class="quantity001">
-                                <button class="button-quantity001">-</button><span>1</span><button
-                                    class="button-quantity001">+</button>
-                            </div>
-                        </td>
-                        <td class="table-d001">₹3600</td>
-                        <td class="table-remove001"><button class="remove001">Remove</button></td>
-                    </tr>
-                    <tr>
-                        <td class="table-img001"><img src="images/image12.webp" alt="Product 2" class="product-img"></td>
-                        <td class="table-d001">keyboard</td>
-                        <td class="table-d001">₹2999</td>
-                        <td class="table-d001">
-                            <div class="quantity001">
-                                <button class="button-quantity001">-</button><span>2</span><button
-                                    class="button-quantity001">+</button>
-                            </div>
-                        </td>
-                        <td class="table-d001">₹5998</td>
-                        <td class="table-remove001"><button class="remove001">Remove</button></td>
-                    </tr>
-                    <tr>
-                        <td class="table-img001"><img src="images/image12.webp" alt="Product 2" class="product-img"></td>
-                        <td class="table-d001">keyboard</td>
-                        <td class="table-d001">₹2999</td>
-                        <td class="table-d001">
-                            <div class="quantity001">
-                                <button class="button-quantity001">-</button><span>2</span><button
-                                    class="button-quantity001">+</button>
-                            </div>
-                        </td>
-                        <td class="table-d001">₹5998</td>
-                        <td class="table-remove001"><button class="remove001">Remove</button></td>
-                    </tr>
+                <tr>
+                    <th class="table-h001">Product</th>
+                    <th class="table-h001">Description</th>
+                    <th class="table-h001">Price</th>
+                    <th class="table-h001">Quantity</th>
+                    <th class="table-h001">Total</th>
+                    <th class="table-h001">Remove</th>
+                </tr>
+                <tbody id="cartBody"></tbody>
             </table>
         </div>
 
         <div class="cart-all001">
             <div class="cart-discount001">
                 <div class="inner-cart001">
-                <h3 class="discount-head001">Coupon Code</h3>
-                <input type="text" class="discount-input001" placeholder="Enter coupon code">
-                <button type="submit" class="discount-button001">Apply</button>
+                    <h3 class="discount-head001">Coupon Code</h3>
+                    <input type="text" class="discount-input001" placeholder="Enter coupon code" id="couponInput">
+                    <button class="discount-button001" onclick="applyCoupon()">Apply</button>
                 </div>
             </div>
             <div class="cart-total001">
                 <div class="inner-cart002">
-                <h3 class="discount-head002">Cart Total</h3>
-                <table class="table-main002">
-                    <tr class="table-main001">
-                        <div class="table002-tr">
-                        <th class="th-table001">Sub total</th>
-                        <td class="td-table001">₹ <span>1200</span></td>
-                        </div>
-                    </tr>
-                    <tr class="table-main001">
-                        <div class="table002-tr">
-                        <th class="th-table001">Discounts</th>
-                        <td class="td-table001">-₹ <span>60</span></td>
-                        </div>
-                    </tr>
-                    <tr class="table-main001">
-                        <div class="table002-tr">
-                        <th class="th-table001">Total</th>
-                        <td class="td-table001">₹ <span>1140</span></td>
-                        </div>
-                    </tr>
-                </table>
-                <a href="Payment_page.html"><button type="submit" class="discount-button002">Proceed to cart</button></a>
+                    <h3 class="discount-head002">Cart Total</h3>
+                    <table class="table-main002">
+                        <tr>
+                            <th class="th-table001">Subtotal</th>
+                            <td class="td-table001">₹ <span id="subtotal">0</span></td>
+                        </tr>
+                        <tr>
+                            <th class="th-table001">Discounts</th>
+                            <td class="td-table001">-₹ <span id="discount">0</span></td>
+                        </tr>
+                        <tr>
+                            <th class="th-table001">Total</th>
+                            <td class="td-table001">₹ <span id="total">0</span></td>
+                        </tr>
+                    </table>
+                    <a href="Payment_page.html"><button class="discount-button002">Proceed to Cart</button></a>
                 </div>
             </div>
         </div>
+    </div>
     </section>
     <footer>
         <div class="footer">
@@ -443,6 +374,113 @@
         });
 
         </script>
+           <script>
+        function updateCartItem(index, newQuantity) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            if (newQuantity < 1) {
+                cart.splice(index, 1);
+            } else {
+                cart[index].quantity = newQuantity;
+            }
+            localStorage.setItem("cart", JSON.stringify(cart));
+            displayCart();
+        }
+
+        function removeFromCart(index) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart.splice(index, 1);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            displayCart();
+        }
+
+        function applyCoupon() {
+            let coupon = document.getElementById("couponInput").value;
+            let discount = coupon === "SAVE20" ? 0.2 : 0;
+            displayCart(discount);
+        }
+
+        function displayCart(discount = 0) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let cartBody = document.getElementById("cartBody");
+            cartBody.innerHTML = "";
+
+            if (cart.length === 0) {
+                let row = document.createElement("tr");
+                row.innerHTML = `<td colspan="6">Your cart is empty</td>`;
+                cartBody.appendChild(row);
+            } else {
+                cart.forEach((item, index) => {
+                    let total = item.price * item.quantity;
+                    let row = document.createElement("tr");
+                    row.innerHTML = `
+                        <td class="table-img001"><img src="${item.image}" alt="${item.name}" class="product-img"></td>
+                        <td class="table-d001">${item.name}</td>
+                        <td class="table-d001">₹${item.price}</td>
+                        <td class="table-d001">
+                            <div class="quantity001">
+                                <button class="button-quantity001" onclick="updateCartItem(${index}, ${item.quantity - 1})">-</button>
+                                <span>${item.quantity}</span>
+                                <button class="button-quantity001" onclick="updateCartItem(${index}, ${item.quantity + 1})">+</button>
+                            </div>
+                        </td>
+                        <td class="table-d001">₹${total}</td>
+                        <td class="table-remove001"><button class="remove001" onclick="removeFromCart(${index})">Remove</button></td>
+                    `;
+                    cartBody.appendChild(row);
+                });
+            }
+
+            let subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+            let discountAmount = subtotal * discount;
+            let total = subtotal - discountAmount;
+
+            document.getElementById("subtotal").textContent = subtotal.toFixed(2);
+            document.getElementById("discount").textContent = discountAmount.toFixed(2);
+            document.getElementById("total").textContent = total.toFixed(2);
+        }
+
+        displayCart();
+    </script>
+        <script>
+
+    window.onload=function (){
+        let savedTheme = localStorage.getItem("theme");
+        let body = document.getElementById("body");
+        let heading = document.getElementById("heading001");
+        let button = document.getElementById("button001");
+        if(savedTheme == "light"){
+            body.style.backgroundColor = "white";
+            heading.style.color = "black";
+            button.innerText = "Black";
+        }
+        else{
+            body.style.backgroundColor = "black";
+            heading.style.color = "white";
+            button.innerText = "White";
+        }
+    }
+
+
+
+
+    function toggle(){
+        let body = document.getElementById("body");
+        let button = document.getElementById("button001");
+        let heading = document.getElementById("heading001");
+        if(body.style.backgroundColor == "white"){
+            body.style.backgroundColor = "black";
+            heading.style.color = "white";
+            button.innerText = "White";
+            localStorage.setItem("theme","dark");
+        }
+        else {
+            body.style.backgroundColor = "white";
+            heading.style.color ="black";
+            button.innerText = "Black";
+            localStorage.setItem("theme","light");
+        }
+    }
+</script>    
 
 </body>
 

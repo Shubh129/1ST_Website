@@ -64,29 +64,45 @@ ul {
 
 .choose1 {
     position: absolute;
-    right: 10px;
-    top: 36px;
-    color: #242F40;
+    right: 50px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    top: 38px;
+    border: none;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    transition: 0.6s ease 0s;
+    box-shadow: 0px 0px 1px black;
 }
 
 .choose {
     position: absolute;
-    right: 160px;
+    right: 110px;
     top: 36px;
+    font-size: 19px;
     color: #242F40;
     font-weight: bold;
+}
+.choose1:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 .choose2 {
     position: absolute;
-    right: 300px;
+    right: 330px;
     top: 30px;
     font-size: 18px;
     color: #242F40;
 }
 .choose3 {
     position: absolute;
-    right: 340px;
+    right: 260px;
     top: 30px;
     font-size: 18px;
     color: #242F40;
@@ -104,7 +120,6 @@ ul {
 
 /*Animation*/
 .animation-layout {
-
     margin-top: 72px;
     height: 400px;
 }
@@ -347,7 +362,7 @@ ul {
     color: white;
     position: relative;
     top: -310px;
-    right: -1200px;
+    right: -1300px;
     font-size:70px;
     display: inline-block;
     font-family: 'Montserrat', sans-serif;
@@ -377,7 +392,7 @@ ul {
     color: white;
     position: relative;
     top: -310px;
-    right: -1200px;
+    right: -1300px;
     font-size: 70px;
     display: inline-block;
     font-family: 'Montserrat', sans-serif;
@@ -412,7 +427,7 @@ ul {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800px;
     letter-spacing: 1px;
-    right: -1200px;
+    right: -1300px;
     animation: Ofor 1.5s forwards 1.4s;
 }
 
@@ -442,7 +457,7 @@ ul {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800px;
     letter-spacing: 1px;
-    right: -1200px;
+    right: -1300px;
     animation: Ufor 1.5s forwards 1.6s;
 }
 
@@ -472,7 +487,7 @@ ul {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800px;
     letter-spacing: 1px;
-    right: -1200px;
+    right: -1300px;
     animation: Tfor 1.5s forwards 1.8s;
 }
 
@@ -502,7 +517,7 @@ ul {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800px;
     letter-spacing: 1px;
-    right: -1200px;
+    right: -1300px;
     animation: Ufor 1.5s forwards 2s;
 }
 
@@ -532,7 +547,7 @@ ul {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800px;
     letter-spacing: 1px;
-    right: -1200px;
+    right: -1300px;
     animation: Sfor 1.5s forwards 2.2s;
 }
 
@@ -712,7 +727,7 @@ body {
     color: white;
     position: relative;
     top: -310px;
-    right: -1200px;
+    right: -1300px;
     font-size: 60px;
     display: inline-block;
     font-family: 'Montserrat', sans-serif;
@@ -742,7 +757,7 @@ body {
     color: white;
     position: relative;
     top: -310px;
-    right: -1200px;
+    right: -1300px;
     font-size: 60px;
     display: inline-block;
     font-family: 'Montserrat', sans-serif;
@@ -777,7 +792,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800px;
     letter-spacing: 1px;
-    right: -1200px;
+    right: -1300px;
     animation: Nfor 1.5s forwards 1.4s;
 }
 
@@ -807,7 +822,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800px;
     letter-spacing: 1px;
-    right: -1200px;
+    right: -1300px;
     animation: Tfir 1.5s forwards 1.6s;
 }
 
@@ -837,7 +852,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800px;
     letter-spacing: 1px;
-    right: -1200px;
+    right: -1300px;
     animation: Afir 1.5s forwards 1.8s;
 }
 
@@ -867,7 +882,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800px;
     letter-spacing: 1px;
-    right: -1200px;
+    right: -1300px;
     animation: Cfir 1.5s forwards 2s;
 }
 
@@ -897,7 +912,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800px;
     letter-spacing: 1px;
-    right: -1200px;
+    right: -1300px;
     animation: Ifor 1.5s forwards 2.2s;
 }
 
@@ -926,7 +941,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800px;
     letter-spacing: 1px;
-    right: -1200px;
+    right: -1300px;
     animation: Ifir 1.5s forwards 2.4s;
 }
 
@@ -955,7 +970,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800px;
     letter-spacing: 1px;
-    right: -1200px;
+    right: -1300px;
     animation: Pfor 1.5s forwards 2.6s;
 }
 
@@ -989,6 +1004,7 @@ body {
     margin-left: 300px;
     display: grid;
     row-gap: 10px;
+    box-shadow: 1px 1px 5px black;
 }
 
 .inner-box {
@@ -1163,7 +1179,7 @@ body {
 .footer-text{
    position: absolute;
     color: white;
-    width: 40px;
+    width: 50px;
     top: -10px;
     left: 10px;
 }
@@ -1200,7 +1216,7 @@ body {
     border: none;
     background-color:lightblue;
     padding-top:5.1px;
-    padding-bottom:5.2px;
+    padding-bottom:5px;
     padding-right: 6px;
     padding-left: 6px;
     border-radius: 0px 5px  5px 0px;
@@ -1211,6 +1227,32 @@ body {
     cursor: pointer;
     box-sizing: border-box;
 }
+.sendImg01{
+    margin-top: -1px;
+    height: 20px;
+    width: 25px;
+    padding-top: 1px;
+    padding-right: 4px;
+    padding-bottom: 0.5px;
+    padding-left: 3px;
+    /* box-sizing: border-box; */
+}
+.send001{
+    border: none;
+    background-color:lightblue;
+    padding-top:5px;
+    padding-bottom:4.5px;
+    padding-right: 6px;
+    padding-left: 6px;
+    border-radius: 0px 5px  5px 0px;
+    border-left: 1px;
+    position: relative;
+    top: 4.4px;
+    right: 7px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
 .text-input01{
     box-sizing: border-box;
     border-radius: 5px 0px 0px 5px;
@@ -1268,8 +1310,8 @@ body {
 
 
 .main-img{
-    width: 1500px;
-    height: 500px;
+    width: 1525px;
+    height: 550px;
 }
 .decoration{
     text-decoration: none;

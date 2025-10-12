@@ -40,10 +40,14 @@
             border-bottom: 1px solid rgba(128, 128, 128, 0.632);
 
          }
+          body,.heading001,
+        footer {
+            transition: background-color 0.4s, white 0.3s;
+        }
     </style>
 </head>
 
-<body style="background:linear-gradient(to top right, black,black, rgb(29, 29, 29),black,black)">
+<body style="background-color: black;" id="body">
     <header class="head">
         <div class="nav_bar">
             <nav>
@@ -66,34 +70,8 @@
                                 src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_cart-eed150.svg"
                                 alt="Cart" class="_1XmrCc" width="24" height="24"></a></li>
                     <li class="nav">
-                        <label id="id1" class="choose">Choose Language :</label>
-                        <select class="choose1" name="Language" id="id1">
-                            <option disabled>--Select Language--</option>
-                            <option value="English" selected>English</option>
-                            <option value="Hindi">Hindi</option>
-                            <option value="French">French</option>
-                            <option value="es">Spanish</option>
-                            <option value="de">German</option>
-                            <option value="zh">Chinese (Mandarin)</option>
-                            <option value="ja">Japanese</option>
-                            <option value="ko">Korean</option>
-                            <option value="ar">Arabic</option>
-                            <option value="ru">Russian</option>
-                            <option value="pt">Portuguese</option>
-                            <option value="it">Italian</option>
-                            <option value="bn">Bengali</option>
-                            <option value="pa">Punjabi</option>
-                            <option value="ta">Tamil</option>
-                            <option value="te">Telugu</option>
-                            <option value="gu">Gujarati</option>
-                            <option value="mr">Marathi</option>
-                            <option value="ur">Urdu</option>
-                            <option value="fa">Persian</option>
-                            <option value="tr">Turkish</option>
-                            <option value="vi">Vietnamese</option>
-                            <option value="th">Thai</option>
-                            <option value="sw">Swahili</option>
-                        </select>
+                        <label id="id1" class="choose">Theme :</label>
+                        <button id="button001" class="choose1" onclick="toggle()">Light</button>
                     </li>
                 </ul>
             </nav>
@@ -108,25 +86,25 @@
         </div>
         <div class="animate-word">
             <div class="animate1-word">
-                <h1>A</h1>
+                <h1 class="content001 heading001">A</h1>
             </div>
             <div class="animate2-word">
-                <h1>B</h1>
+                <h1 class="heading001">B</h1>
             </div>
             <div class="animate3-word">
-                <h1>O</h1>
+                <h1 class="heading001">O</h1>
             </div>
             <div class="animate4-word">
-                <h1>U</h1>
+                <h1 class="heading001">U</h1>
             </div>
             <div class="animate5-word">
-                <h1>T</h1>
+                <h1 class="heading001">T</h1>
             </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <div class="animate6-word">
-                <h1>U</h1>
+                <h1 class="heading001">U</h1>
             </div>
             <div class="animate7-word">
-                <h1>S</h1>
+                <h1 class="heading001">S</h1>
             </div>
         </div>
         <div class="about-info1">
@@ -238,6 +216,55 @@
         window.addEventListener("click", function(){ 
             dropdownContent.style.display="none";
         });
+
+    </script>
+
+
+    <script>
+
+        window.onload = function () {
+            let savedTheme = localStorage.getItem("theme") || "light";
+            let body = document.getElementById("body");
+            let heading1 = document.querySelectorAll(".heading001");
+            let button = document.getElementById("button001");
+            if (savedTheme == "light") {
+                body.style.backgroundColor = "white";
+                heading1.forEach( r =>r.style.color = "black");
+                button.innerText = "Dark";
+                localStorage.setItem("theme","light");
+            }
+            else {
+                body.style.backgroundColor = "black";
+                heading1.forEach( r =>r.style.color = "white");
+                button.innerText = "Light";
+                localStorage.setItem("theme","dark");
+            }
+        }
+
+
+
+
+        function toggle() {
+            let body = document.getElementById("body");
+            let heading1 = document.querySelectorAll(".heading001");
+            let button = document.getElementById("button001");
+
+            let currentTheme = localStorage.getItem("theme") || "light";
+            let isLight = currentTheme === "light";
+
+            // Set colors
+            body.style.backgroundColor = isLight ? "black" : "white";
+            
+
+            
+            heading1.forEach(r=>{r.style.color = isLight ? "white" : "black";});
+            button.innerText = isLight ? "Light" : "Dark";
+
+            
+
+
+            localStorage.setItem("theme", isLight ? "dark" : "light");
+        }
 
     </script>
 
