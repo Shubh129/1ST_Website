@@ -40,10 +40,13 @@
             border-bottom: 1px solid rgba(128, 128, 128, 0.632);
 
          }
+         body{
+            transition: background-color 0.5s, white 0.3s;
+        }
     </style>
 </head>
 
-<body class="bg-category" style="background-color: black;">
+<body class="bg-category" id="body" style="background-color: black;">
     <header class="head">
         <div class="nav_bar">
             <nav>
@@ -75,8 +78,8 @@
     </header>
     <section class="section1">
 
-        <h2 class="head-title">Technology & Essentials</h2>
-        <div class="outer-box1">
+        <h2 id="heading001" class="head-title">Technology & Essentials</h2>
+        <div id="categoryid3" class="outer-box1">
             <div class="grid-main">
                 <div class="grid">
                     <img class="CategoryImg" src="images/Electronics12.jpg" alt="ElectronicsImg">
@@ -100,8 +103,8 @@
                 </div>
             </div>
         </div>
-        <h2  class="head-title">Lifestyle & Personal Care</h2>
-        <div class="outer-box2">
+        <h2 id="heading002"  class="head-title">Lifestyle & Personal Care</h2>
+        <div id="categoryid1" class="outer-box2">
             <div class="grid-main">
                 <div class="grid">
                     <img class="CategoryImg" src="images/Home_Living.jpg" alt="Home&LivingImg">
@@ -125,8 +128,8 @@
                 </div>
             </div>
         </div>
-        <h2  class="head-title" style="font-size: 70px;">Learning, Hobbies & Active Living</h2>
-        <div class="outer-box3">
+        <h2 id="heading003"  class="head-title" style="font-size: 70px;">Learning, Hobbies & Active Living</h2>
+        <div id="categoryid2" class="outer-box3">
             <div class="grid-main">
                 <div class="grid">
                     <img class="CategoryImg" src="images/Toys_Games.jpg" alt="Toys&GamesImg">
@@ -212,46 +215,70 @@
 
     </script>
 
-        <script>
+    <script>
 
-    window.onload=function (){
-        let savedTheme = localStorage.getItem("theme");
-        let body = document.getElementById("body");
-        let heading = document.getElementById("heading001");
-        let button = document.getElementById("button001");
-        if(savedTheme == "light"){
-            body.style.backgroundColor = "white";
-            heading.style.color = "black";
-            button.innerText = "Black";
+        window.onload = function () {
+            let savedTheme = localStorage.getItem("theme") || "light";
+            let body = document.getElementById("body");
+            let button = document.getElementById("button001");
+            let categorybox1 = document.getElementById("categoryid3");
+            let categorybox2 = document.getElementById("categoryid1");
+            let categorybox3 = document.getElementById("categoryid2");
+            let heading1 = document.getElementById("heading001");
+            let heading2 = document.getElementById("heading002");
+            let heading3 = document.getElementById("heading003");
+            if (savedTheme == "light") {
+                body.style.background = "white";
+                button.innerText = "Dark";
+                heading1.style.color = "black";
+                heading2.style.color = "black";
+                heading3.style.color = "black";
+                categorybox1.style.background = "linear-gradient(to top, white, #a05eff)";
+                categorybox2.style.background = "linear-gradient(to top, white, #F0E4D3)";
+                categorybox3.style.background = "linear-gradient(to top, white, #7D7D7D)";
+                localStorage.setItem("theme","light");
+            }
+            else {
+                body.style.background = "black";
+                button.innerText = "Light";
+                categorybox1.style.background = "linear-gradient(to top, #000000, #a05eff)";
+                categorybox2.style.background = "linear-gradient(to top, #000000, #F0E4D3)";
+                categorybox3.style.background = "linear-gradient(to top, #000000, #7D7D7D)";
+                heading1.style.color = "white";
+                heading2.style.color = "white";
+                heading3.style.color = "white";
+                localStorage.setItem("theme","dark");
+            }
         }
-        else{
-            body.style.backgroundColor = "black";
-            heading.style.color = "white";
-            button.innerText = "White";
+
+
+
+
+        function toggle() {
+            let body = document.getElementById("body");
+            let button = document.getElementById("button001");
+            let categorybox1 = document.getElementById("categoryid3");
+            let categorybox2 = document.getElementById("categoryid1");
+            let categorybox3 = document.getElementById("categoryid2");
+            let heading1 = document.getElementById("heading001");
+            let heading2 = document.getElementById("heading002");
+            let heading3 = document.getElementById("heading003");
+            let currentTheme = localStorage.getItem("theme") || "light";
+            let isLight = currentTheme === "light";
+
+            // Set colors
+            body.style.backgroundColor = isLight ? "black" : "white";
+                categorybox1.style.background = isLight ? "linear-gradient(to top, #000000, #a05eff)" : "linear-gradient(to top, white, #a05eff)";
+                categorybox2.style.background = isLight ? "linear-gradient(to top, #000000, #F0E4D3)" : "linear-gradient(to top, white, #F0E4D3)";
+                categorybox3.style.background = isLight ? "linear-gradient(to top, #000000, #7D7D7D)" : "linear-gradient(to top, white, #7D7D7D)";
+            button.innerText = isLight ? "Light" : "Dark";
+            heading1.style.color = isLight ? "white" : "black";
+            heading2.style.color = isLight ? "white" : "black";
+            heading3.style.color = isLight ? "white" : "black";
+            localStorage.setItem("theme", isLight ? "dark" : "light");
         }
-    }
 
-
-
-
-    function toggle(){
-        let body = document.getElementById("body");
-        let button = document.getElementById("button001");
-        let heading = document.getElementById("heading001");
-        if(body.style.backgroundColor == "white"){
-            body.style.backgroundColor = "black";
-            heading.style.color = "white";
-            button.innerText = "White";
-            localStorage.setItem("theme","dark");
-        }
-        else {
-            body.style.backgroundColor = "white";
-            heading.style.color ="black";
-            button.innerText = "Black";
-            localStorage.setItem("theme","light");
-        }
-    }
-</script>
+    </script>
 </body>
 
 </html>

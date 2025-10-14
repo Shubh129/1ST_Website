@@ -12,15 +12,17 @@
             display: flex;
             justify-content: center;
             background-color: white;
-            margin-left: 250px;
-            margin-right: 250px;
+            margin-left: 150px;
+            margin-right: 150px;
+            border-radius: 15px;
+            box-shadow: 1px 4px 5px black;
         }
 
         .product-flex001 {
             border: 1px solid white;
             border: none;
             width: 600px;
-            height: 600px;
+            height: 500px;
             display: flex;
             overflow: hidden;
             scroll-behavior: smooth;
@@ -35,13 +37,15 @@
             font-family: 'Montserrat', sans-serif;
             letter-spacing: 1px;
             background-color: white;
-            border-radius: 12px;
+            /* border-radius: 12px; */
         }
 
         .image-scroll001 {
             position: relative;
             top: 0px;
             height: 500px;
+            padding-right: 50px;
+            padding-left: 50px;
             width: 700px;
             z-index: 1;
             border-radius: 10px;
@@ -52,12 +56,20 @@
             display: flex;
             justify-content: center;
             margin-top: 50px;
+            padding-left: 20px;
         }
 
         .single-detail001 {
             border: 1px solid white;
-            width: 900px;
-            height: 300px;
+            border-radius: 7px;
+            width: 100%;
+            margin-left: 430px;
+            margin-right: 430px;
+            height: 100%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .scroll-left {
@@ -117,79 +129,208 @@
             font-size: 25px;
         }
 
-        /* .product-title001 h3 {
-            /* text-align: center; /
-        } */
+        .product-title001 h3 {
+             word-spacing: 10px;
+             font-size: 38px;
+        }
 
         .product-margin001 {
             margin: 15px;
         }
-        .product-tagline001{
-            font-size: 20px;
+
+        .product-tagline001 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 25px;
             color: rgba(0, 0, 0, 0.444);
             margin-top: 20px;
         }
-        .product-details001{
-            font-size: 24px;
+
+        .product-details001 {
+            font-size: 35px;
             margin-top: 10px;
         }
-        .buy-button001{
+
+        .buy-button001 {
             margin-top: 20px;
             background-color: #a05eff;
             color: white;
             border: none;
-            padding-top:15px;
+            padding-top: 15px;
             padding-bottom: 15px;
-            padding-right: 15px;
-            padding-left: 15px;
+            padding-right: 20px;
+            padding-left: 20px;
             font-size: 15px;
             border-radius: 12px;
             transition: 0.2s ease-in-out 0s;
         }
 
-        .buy-button001:hover{
+        .buy-button001:hover {
             color: white;
-            background-color:#7d7d7d ;
+            background-color: #7d7d7d;
             transform: scale(1.1);
         }
-        .dropdown001{
+
+        .dropdown001 {
             position: relative;
             right: -210px;
             top: 19px;
         }
-        .dropdown001:hover{
+
+        .dropdown001:hover {
             cursor: pointer;
         }
 
-        .dropdown-content001{
-             display: none;
+        .dropdown-content001 {
+            display: none;
             position: absolute;
 
-            top:75px;
+            top: 75px;
             right: 310px;
             background-color: white;
             border: 1px solid rgba(128, 128, 128, 0.632);
             border-radius: 0px 0px 10px 10px;
             min-width: 150px;
         }
-        .dropdown-content001 a{
+
+        .dropdown-content001 a {
             display: block;
             padding: 10px;
             text-align: center;
-            color:black;
+            color: black;
             text-decoration: none;
 
-         }
-         .a10{
-            
+        }
+
+        .a10 {
+
             border-bottom: 1px solid rgba(128, 128, 128, 0.632);
 
-         }
+        }
 
+        #displaydiv {
+            background-color: white;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            margin-top: 0px;
+            border-radius: 12px;
+            font-family: 'Poppins', sans-serif;
+            transition: all 1s ease;
+        }
+        #displaydiv div {
+            padding: 20px;
+        }
+
+        /* Style any headings or paragraphs that appear inside */
+        #displaydiv h1 {
+            color: #a05eff;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        #displaydiv div h1 {
+            color: #a05eff;
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        #displaydiv h1 p {
+            color: #a05eff;
+            font-size: 30px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        #displaydiv p {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        #displaydiv form {
+            display: flex;
+            border: none;
+            border-radius: 15px;
+            background-color: #0A1824ff;
+            height: 250px;
+            width: 600px;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+        }
+        #displaydiv form div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #displaydiv input {
+
+            padding-bottom: 50px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            width: 450px;
+        }
+
+        #displaydiv button {
+            background-color: #a05eff;
+            color: white;
+            border: none;
+            margin-left: 75px;
+            margin-right: 75px;
+            border-radius: 6px;
+            padding: 15px;
+            width: 75vh;
+            cursor: pointer;
+        }
+
+        #displaydiv button:hover {
+            background-color: #0056b3;
+        }
+
+        .buttondiv001 {
+            background-color: white;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding-top: 10px;
+            padding-right: 30px;
+            padding-left: 30px;
+            padding-bottom: 10px;
+            border-radius: 7px;
+            border: none;
+            font-weight: bold;
+            margin-left: 0px;
+            font-size: 18px;
+            transition: 0.3s ease-in-out 0s;
+        }
+        #displaydiv form {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .buttondiv001:hover {
+            background-color: #0A1824ff;
+            color: orange;
+            cursor: pointer;
+        }
+        .span-rating001{
+            display: block;
+            font-size: 30px;
+        }
+        .content-box{
+            width: 1100px;
+        }
+        .content-box1{
+            width: 1100px;
+        }
+        .content-box2{
+            width: 1100px;
+        }
+        
     </style>
 </head>
 
-<body style="background:linear-gradient(to top right, black,black, rgb(29, 29, 29),black,black)">
+<body id="body" style="background-color: black;">
     <header class="head">
         <div class="nav_bar">
             <nav>
@@ -201,19 +342,21 @@
                     <li class="nav"><a href="Categories.html" class="a1 a8">Categories</a></li>
                     <li class="nav"><a href="Aboutus.html" class="a1 a8">About</a></li>
                     <li class="nav"><a href="Contact.html" class="a1 a8">Contact</a></li>
-                    <li class="nav"><div class="a1 a8 choose3 dropdown001"><img
+                    <li class="nav">
+                        <div class="a1 a8 choose3 dropdown001"><img
                                 src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/profile-52e0dc.svg"
                                 alt="Login" class="_1XmrCc _2zJ7Pb" width="24" height="24"></div>
-                            <div class="dropdown-content001">
-                                <a  class="a10"href="Registeration_Page.html">Register / Signup</a>
-                                <a class="a20" href="LOGIN_page.html">Login?</a>
-                            </div></li>
+                        <div class="dropdown-content001">
+                            <a class="a10" href="Registeration_Page.html">Register / Signup</a>
+                            <a class="a20" href="LOGIN_page.html">Login?</a>
+                        </div>
+                    </li>
                     <li class="nav"><a href="Cart_page.html" class="a1 a8 choose2"><img
                                 src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_cart-eed150.svg"
                                 alt="Cart" class="_1XmrCc" width="24" height="24"></a></li>
                     <li class="nav">
                         <label id="id1" class="choose">Theme :</label>
-                        <button id="button001" class="choose1" onclick="toggle()">White</button>
+                        <button id="button001" class="choose1" onclick="toggle()">Light</button>
                     </li>
                 </ul>
             </nav>
@@ -230,9 +373,12 @@
                     style="margin-left: 11.5px; margin-right: 11.5px;">
                 <img src="images/wireless11.webp" class="image-scroll001" alt=""
                     style="margin-left: 25px; margin-right: 27px;">
-                <img src="images/wireless12.webp" class="image-scroll001" alt="" style="margin-left: 23px; margin-right: 27px;">
-                <img src="images/wireless13.webp" class="image-scroll001" alt="" style="margin-left: 22px; margin-right: 37px;">
-                <img src="images/wireless14.webp" class="image-scroll001" alt="" style="margin-left: 15px; margin-right: 27px;">
+                <img src="images/wireless12.webp" class="image-scroll001" alt=""
+                    style="margin-left: 23px; margin-right: 27px;">
+                <img src="images/wireless13.webp" class="image-scroll001" alt=""
+                    style="margin-left: 22px; margin-right: 37px;">
+                <img src="images/wireless14.webp" class="image-scroll001" alt=""
+                    style="margin-left: 15px; margin-right: 27px;">
                 <img src="images/wireless15.webp" class="image-scroll001" alt=""
                     style="margin-left: 20px; margin-right: 5px;">
             </div>
@@ -243,7 +389,9 @@
                         <h3>
                             Cosmic Byte Inferno 2.4Ghz Wireless + Bluetooth + Wired Headphone (Black)</h3>
                         <div class="product-tagline001">High-Quality Sound & Multi-Mode Connectivity</div>
-                        <div class="product-details001">Price: $99.99 <span class="span-rating001"> Rating: ★★★★☆ (4.5/5)</span></div>
+                        <div class="product-details001">Price: $99.99 <span class="span-rating001"> Rating: ★★★★☆
+                                (4.5/5)</span></div>
+                        <button class="buy-button001">Add to Cart</button>
                         <button class="buy-button001">Buy Now</button>
                     </div>
 
@@ -254,15 +402,26 @@
         </div>
         <div class="outer-detail001">
             <div class="single-detail001">
-
-            </div>
-        </div>
+                <div>
+                    <button class="buttondiv001"
+                        onclick="showText('desc')">Description</button>
+                    <button class="buttondiv001"
+                        onclick="showText('info')">Additional
+                        Information</button>
+                    <button class="buttondiv001"
+                        onclick="showText('review')">Review/Ratings</button>
+                    <div>
+                        <div id="displaydiv">
+                        </div>
+                    </div>
+                   
+                </div>
     </section>
     <script>
         let slider = document.getElementById("slider001");
         let leftButton = document.getElementById("previous-button001");
         let rightButton = document.getElementById("next-button001");
-        let scrollamount = 550;
+        let scrollamount = 650;
 
         leftButton.addEventListener("click", () => {
 
@@ -327,61 +486,144 @@
                 Shubhdeep Lotra</h2>
         </div>
     </footer>
-                    <script>
+    <script>
         const dropdown = document.querySelector(".dropdown001");
         const dropdownContent = document.querySelector(".dropdown-content001");
 
-        dropdown.addEventListener("click",function(event){
+        dropdown.addEventListener("click", function (event) {
             event.stopPropagation();
-            dropdownContent.style.display=dropdownContent.style.display==="block" ? "none":"block";
+            dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
 
         });
-        window.addEventListener("click", function(){ 
-            dropdownContent.style.display="none";
+        window.addEventListener("click", function () {
+            dropdownContent.style.display = "none";
         });
 
     </script>
 
-        <script>
+    <script>
 
-    window.onload=function (){
-        let savedTheme = localStorage.getItem("theme");
-        let body = document.getElementById("body");
-        let heading = document.getElementById("heading001");
-        let button = document.getElementById("button001");
-        if(savedTheme == "light"){
-            body.style.backgroundColor = "white";
-            heading.style.color = "black";
-            button.innerText = "Black";
+        window.onload = function () {
+            let savedTheme = localStorage.getItem("theme");
+            let body = document.getElementById("body");
+            let heading = document.getElementById("heading001");
+            let button = document.getElementById("button001");
+            if (savedTheme == "light") {
+                body.style.backgroundColor = "white";
+                heading.style.color = "black";
+                button.innerText = "Black";
+            }
+            else {
+                body.style.backgroundColor = "black";
+                heading.style.color = "white";
+                button.innerText = "White";
+            }
         }
-        else{
-            body.style.backgroundColor = "black";
-            heading.style.color = "white";
-            button.innerText = "White";
+
+
+
+
+        function toggle() {
+            let body = document.getElementById("body");
+            let button = document.getElementById("button001");
+            let heading = document.getElementById("heading001");
+            if (body.style.backgroundColor == "white") {
+                body.style.backgroundColor = "black";
+                heading.style.color = "white";
+                button.innerText = "White";
+                localStorage.setItem("theme", "dark");
+            }
+            else {
+                body.style.backgroundColor = "white";
+                heading.style.color = "black";
+                button.innerText = "Black";
+                localStorage.setItem("theme", "light");
+            }
         }
+    </script>
+    <script>
+  function showText(type) {
+    let displayDiv = document.getElementById('displaydiv');
+    let html = '';
+
+    if (type === 'desc') {
+      html = `
+        <div class="content-box">
+           <h1>Description</h1>
+  <p>
+    Experience next-level audio performance with the <strong>Cosmic Byte Inferno 2.4GHz Wireless + Bluetooth + Wired Headphone</strong>. 
+    Designed for gamers and audiophiles alike, this headset combines multiple connectivity options — Wireless 2.4GHz, Bluetooth, and Wired — giving you the freedom to switch seamlessly between devices.
+  </p>
+  <p>
+    The high-quality 50mm neodymium drivers deliver powerful bass and crystal-clear sound, ensuring you never miss a single detail. 
+    Its detachable noise-cancelling microphone provides crisp voice clarity, making it perfect for gaming, calls, or streaming. 
+    With soft memory-foam ear cushions and an adjustable headband, comfort is guaranteed during long sessions.
+  </p>
+  <ul>
+    <li><b> 3-in-1 Connectivity: Wireless, Bluetooth, and Wired modes</b></li>
+    <li><b> Long-lasting Battery: Up to 15 hours of wireless playback</b></li>
+    <li><b> Detachable Noise-Cancelling Microphone</b></li>
+    <li><b> LED Indicator for connectivity and charging status</b></li>
+    <li><b> Compatible with PC, Laptop, Smartphones, PS4, and PS5</b></li>
+  </ul>
+
+        </div>`;
+    } 
+    else if (type === 'info') {
+      html = `
+        <div class="content-box1">
+          <h1>List of Ingredients</h1>
+          <p>Ingredients information will be updated soon.</p>
+        </div>`;
+    } 
+    else if (type === 'review') {
+      html = `
+        <div class="content-box2">
+          <h1>Rate your Experience</h1>
+          <input type="text" class="review-input" placeholder="Tell us about your experience!">
+          <button class="submit-btn" type="button">Submit Review</button>
+        </div>`;
     }
 
-
-
-
-    function toggle(){
-        let body = document.getElementById("body");
-        let button = document.getElementById("button001");
-        let heading = document.getElementById("heading001");
-        if(body.style.backgroundColor == "white"){
-            body.style.backgroundColor = "black";
-            heading.style.color = "white";
-            button.innerText = "White";
-            localStorage.setItem("theme","dark");
-        }
-        else {
-            body.style.backgroundColor = "white";
-            heading.style.color ="black";
-            button.innerText = "Black";
-            localStorage.setItem("theme","light");
-        }
-    }
+    displayDiv.innerHTML = html;
+  }
 </script>
+<script>
+
+        window.onload = function () {
+            let savedTheme = localStorage.getItem("theme") || "light";
+            let body = document.getElementById("body");
+        
+            let button = document.getElementById("button001");
+            if (savedTheme == "light") {
+                body.style.backgroundColor = "white";
+                button.innerText = "Dark";
+                localStorage.setItem("theme","light");
+            }
+            else {
+                body.style.backgroundColor = "black";
+                button.innerText = "Light";
+                localStorage.setItem("theme","dark");
+            }
+        }
+
+
+
+
+        function toggle() {
+            let body = document.getElementById("body");
+            let button = document.getElementById("button001");
+            let currentTheme = localStorage.getItem("theme") || "light";
+            let isLight = currentTheme === "light";
+
+            // Set colors
+            body.style.backgroundColor = isLight ? "black" : "white";
+            button.innerText = isLight ? "Light" : "Dark";
+
+            localStorage.setItem("theme", isLight ? "dark" : "light");
+        }
+
+    </script>
 
 </body>
 

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #displaydiv{
+            border: 2px solid black;
+            width: 500px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <button onclick="showText('<h1>Description</h1><p>Those with sensitive skin or conditions such as psoriasis or eczema can take aid from natural organic soaps. Glycerine soaps also protect the skin which is sensitive and delicate. It is high absorbing water in the air and ensuring the skin remains soft and healthy. Life BioNatura Alovera Glycerine Soap is the perfect way to stay fresh and hygienic without resorting to chemicals. It contain the natural goodness of nature and make them nourishing for your skin. It comfort, heal and relieve stress as well. It contains the healing powers of Alovera and glycerine beside other herbs. Life BioNatura Alovera Glycerine Soap contains natural antioxidants, antiseptic, antimicrobial properties. These are also suited for aromatherapy as well – therefore, they soothe the body and the mind.</p>')">Text 1</button>
+    <button onclick="showText('<h1>List of the Ingredients</h1></p>Ingredients information will be updated soon.</p>')">Text 1</button>
+    <button onclick="showText('<form><h1>Rate your Experience</h1><input type=\'text\' placeholder=\'Tell us about your experience!\'><button type=\'button\'>Submit Review</button></form>')">Text 1</button>>
+    <div>
+        <div id="displaydiv">   
+    </div>
+    <script>
+        function showText(message){
+            document.getElementById("displaydiv").innerHTML = message ;
+        }
+        
+    </script>
+</body>
+</html>

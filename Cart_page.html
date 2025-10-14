@@ -234,7 +234,7 @@
     </style>
 </head>
 
-<body style="background:linear-gradient(to top right, black,black, rgb(29, 29, 29),black,black)">
+<body id="body" style="background:linear-gradient(to top right, black,black, rgb(29, 29, 29),black,black)">
     <header class="head">
         <div class="nav_bar">
             <nav>
@@ -441,46 +441,41 @@
 
         displayCart();
     </script>
-        <script>
+             <script>
 
-    window.onload=function (){
-        let savedTheme = localStorage.getItem("theme");
-        let body = document.getElementById("body");
-        let heading = document.getElementById("heading001");
-        let button = document.getElementById("button001");
-        if(savedTheme == "light"){
-            body.style.backgroundColor = "white";
-            heading.style.color = "black";
-            button.innerText = "Black";
+        window.onload = function () {
+            let savedTheme = localStorage.getItem("theme") || "light";
+            let body = document.getElementById("body");
+            let button = document.getElementById("button001");
+            if (savedTheme == "light") {
+                body.style.background = "linear-gradient(to top right, white,white, white,white,white)";
+                button.innerText = "Dark";
+                localStorage.setItem("theme","light");
+            }
+            else {
+                body.style.background = "linear-gradient(to top right, black,black, rgb(29, 29, 29),black,black)";
+                button.innerText = "Light";
+                localStorage.setItem("theme","dark");
+            }
         }
-        else{
-            body.style.backgroundColor = "black";
-            heading.style.color = "white";
-            button.innerText = "White";
+
+
+
+
+        function toggle() {
+            let body = document.getElementById("body");
+            let button = document.getElementById("button001");
+            let currentTheme = localStorage.getItem("theme") || "light";
+            let isLight = currentTheme === "light";
+
+            // Set colors
+            body.style.background = isLight ? "linear-gradient(to top right, black,black, rgb(29, 29, 29),black,black)" : "linear-gradient(to top right, white,white, white,white,white)";
+            button.innerText = isLight ? "Light" : "Dark";
+
+            localStorage.setItem("theme", isLight ? "dark" : "light");
         }
-    }
 
-
-
-
-    function toggle(){
-        let body = document.getElementById("body");
-        let button = document.getElementById("button001");
-        let heading = document.getElementById("heading001");
-        if(body.style.backgroundColor == "white"){
-            body.style.backgroundColor = "black";
-            heading.style.color = "white";
-            button.innerText = "White";
-            localStorage.setItem("theme","dark");
-        }
-        else {
-            body.style.backgroundColor = "white";
-            heading.style.color ="black";
-            button.innerText = "Black";
-            localStorage.setItem("theme","light");
-        }
-    }
-</script>    
+    </script>
 
 </body>
 

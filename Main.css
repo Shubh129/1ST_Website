@@ -710,7 +710,7 @@ body {
 }
 
 .section1 {
-    margin-top: 120px;
+    margin-top: 200px;
     margin-bottom: 100px;
 }
 
@@ -1290,7 +1290,8 @@ body {
 .container-main001{
     display: grid;
     grid-template: 500px/ 100% 100% 100% 100% 100% ;
-   animation: slideShow 20s infinite;
+   animation: slideShow 18s infinite;
+   margin-top: 60px;
 }
 
 @keyframes slideShow {
@@ -1311,7 +1312,7 @@ body {
 
 .main-img{
     width: 1525px;
-    height: 550px;
+    height: 650px;
 }
 .decoration{
     text-decoration: none;

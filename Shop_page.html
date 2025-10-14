@@ -765,47 +765,6 @@
 
 
 
-    <!-- <script>
-
-        window.onload = function () {
-            let savedTheme = localStorage.getItem("theme") || "light";
-            let body = document.getElementById("body");
-            let button = document.getElementById("button001");
-            if (savedTheme == "light") {
-                body.style.backgroundColor = "white";
-                button.innerText = "Dark";
-                localStorage.setItem("theme","dark");
-            }
-            else {
-                body.style.backgroundColor = "black";
-                button.innerText = "Light";
-                localStorage.setItem("theme","light");
-            }
-        }
-
-
-
-
-        function toggle() {
-            let body = document.getElementById("body");
-            let reviewsbox = document.querySelectorAll("#review001,#review002,#review003");
-            let reviews = document.querySelectorAll('.inner-text0002');
-            
-            let button = document.getElementById("button001");
-
-            let currentTheme = localStorage.getItem("theme") || "light";
-            let isLight = currentTheme === "light";
-
-            // Set colors
-            body.style.backgroundColor = isLight ? "black" : "white";
-            button.innerText = isLight ? "Light" : "Dark";
-
-
-
-            localStorage.setItem("theme", isLight ? "dark" : "light");
-        }
-
-    </script> -->
     <script>
 
         window.onload = function () {
