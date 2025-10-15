@@ -228,12 +228,16 @@
             color: #a05eff;
             font-size: 24px;
             margin-bottom: 10px;
+            align-items: center;
         }
         #displaydiv div h1 {
             color: #a05eff;
             font-size: 24px;
             margin-bottom: 10px;
             text-align: left;
+            color: #a05eff;
+            font-size: 35px;
+            word-spacing: 10px;
         }
         #displaydiv h1 p {
             color: #a05eff;
@@ -258,21 +262,21 @@
             gap: 10px;
             padding: 20px;
         }
-        #displaydiv form div {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+       
 
-        #displaydiv input {
-
-            padding-bottom: 50px;
+       
+        .review-input{
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 500px;
+            font-size: 15px;
+            padding-bottom: 100px;
+            height: 100px;
             border-radius: 6px;
             border: 1px solid #ccc;
-            width: 450px;
         }
 
-        #displaydiv button {
+        /* #displaydiv button {
             background-color: #a05eff;
             color: white;
             border: none;
@@ -282,9 +286,17 @@
             padding: 15px;
             width: 75vh;
             cursor: pointer;
-        }
+        } */
+         .submit-btn{
+            background-color: #a05eff;
+            color: white;
+            border: none;
+            padding: 15px;
+            width: 500px;
+            border-radius: 6px;
+         }
 
-        #displaydiv button:hover {
+        .submit-btn:hover {
             background-color: #0056b3;
         }
 
@@ -314,8 +326,10 @@
             cursor: pointer;
         }
         .span-rating001{
+            margin-top: 10px;
+            margin-bottom: 10px;
             display: block;
-            font-size: 30px;
+            font-size: 20px;
         }
         .content-box{
             width: 1100px;
@@ -325,6 +339,27 @@
         }
         .content-box2{
             width: 1100px;
+        }
+        .content-box2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .form-content001{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+             display: flex;
+            border: none;
+            border-radius: 15px;
+            background-color: #0A1824ff;
+            height: 250px;
+            width: 600px;
+        }
+        .form-heading001{
+            text-align: center;
+            color: #a05eff;
+            font-size: 50px;
         }
         
     </style>
@@ -391,7 +426,7 @@
                         <div class="product-tagline001">High-Quality Sound & Multi-Mode Connectivity</div>
                         <div class="product-details001">Price: $99.99 <span class="span-rating001"> Rating: ★★★★☆
                                 (4.5/5)</span></div>
-                        <button class="buy-button001">Add to Cart</button>
+                        <button class="buy-button001" onclick="addToCart('Wireless Headphones', 49, 'images/image11.webp')">Add to Cart</button>
                         <button class="buy-button001">Buy Now</button>
                     </div>
 
@@ -572,16 +607,20 @@
     else if (type === 'info') {
       html = `
         <div class="content-box1">
-          <h1>List of Ingredients</h1>
-          <p>Ingredients information will be updated soon.</p>
+          <h1>Additional Information</h1>
+          <p>The Cosmic Byte Inferno is a versatile tri-mode gaming headset offering seamless connectivity via 2.4GHz ultra-low latency wireless (20ms) for competitive gaming, Bluetooth for mobile use, and 3.5mm wired for universal compatibility.
+
+It features 50mm drivers for immersive audio quality and a detachable ENC microphone for clear voice communication. The lightweight design and 40-hour battery life make it comfortable and reliable for extended use across PC, consoles, and mobile devices.</p>
         </div>`;
     } 
     else if (type === 'review') {
       html = `
         <div class="content-box2">
-          <h1>Rate your Experience</h1>
-          <input type="text" class="review-input" placeholder="Tell us about your experience!">
-          <button class="submit-btn" type="button">Submit Review</button>
+            <form class="form-content001">
+          <h2 class="form-heading001">Rate your Experience</h2>
+          <input type="text" class="review-input" placeholder=" Tell us about your experience!">
+          <button class="submit-btn" type="submit">Submit Review</button>
+          </form>
         </div>`;
     }
 
@@ -623,6 +662,19 @@
             localStorage.setItem("theme", isLight ? "dark" : "light");
         }
 
+    </script>
+           <script>
+        function addToCart(name, price, image) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let existingItem = cart.find(item => item.name === name);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ name: name, price: price, quantity: 1, image: image });
+            }
+            localStorage.setItem("cart", JSON.stringify(cart));
+            alert(`${name} has been added to your cart!`);
+        }
     </script>
 
 </body>
